@@ -1,0 +1,9 @@
+﻿<Application x:Class="GermanyEuro2024_LuuQuangHoa.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GermanyEuro2024_LuuQuangHoa"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
