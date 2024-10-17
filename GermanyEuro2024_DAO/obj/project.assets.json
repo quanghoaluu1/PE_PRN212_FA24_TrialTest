@@ -1495,6 +1495,16 @@
             "rid": "win"
           }
         }
+      },
+      "GermanyEuro2024_BusinessObject/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/GermanyEuro2024_BusinessObject.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GermanyEuro2024_BusinessObject.dll": {}
+        }
       }
     }
   },
@@ -4030,10 +4040,16 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "GermanyEuro2024_BusinessObject/1.0.0": {
+      "type": "project",
+      "path": "../GermanyEuro2024_BusinessObject/GermanyEuro2024_BusinessObject.csproj",
+      "msbuildProject": "../GermanyEuro2024_BusinessObject/GermanyEuro2024_BusinessObject.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "GermanyEuro2024_BusinessObject >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10"
@@ -4071,7 +4087,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest_LuuQuangHoa\\GermanyEuro2024_BusinessObject\\GermanyEuro2024_BusinessObject.csproj": {
+              "projectPath": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest_LuuQuangHoa\\GermanyEuro2024_BusinessObject\\GermanyEuro2024_BusinessObject.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

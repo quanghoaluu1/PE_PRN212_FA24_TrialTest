@@ -9,3 +9,10 @@ D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_DAO\obj\Debug\ne
 D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_DAO\obj\Debug\net8.0\refint\GermanyEuro2024_DAO.dll
 D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_DAO\obj\Debug\net8.0\GermanyEuro2024_DAO.pdb
 D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_DAO\obj\Debug\net8.0\ref\GermanyEuro2024_DAO.dll
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_DAO\bin\Debug\net8.0\GermanyEuro2024_DAO.runtimeconfig.json
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_DAO\bin\Debug\net8.0\GermanyEuro2024_BusinessObject.dll
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_DAO\bin\Debug\net8.0\GermanyEuro2024_BusinessObject.pdb
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_DAO\obj\Debug\net8.0\GermanyEuro2024_DAO.csproj.AssemblyReference.cache
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_DAO\obj\Debug\net8.0\GermanyEuro2024_DAO.sourcelink.json
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_DAO\obj\Debug\net8.0\GermanyE.23752A89.Up2Date
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_DAO\obj\Debug\net8.0\GermanyEuro2024_DAO.genruntimeconfig.cache

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using GermanyEuro2024_BusinessObject;
 
-namespace GermanyEuro2024_LuuQuangHoa;
+namespace GermanyEuro2024_DAO;
 
 public partial class GermanyEuro2024DbContext : DbContext
 {

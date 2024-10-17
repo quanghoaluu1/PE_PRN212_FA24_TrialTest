@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using GermanyEuro2024_BusinessObject;
+using GermanyEuro2024_Repository;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,16 +21,9 @@ namespace GermanyEuro2024_LuuQuangHoa
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new LoginPage());
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_cancel_Click(object sender, RoutedEventArgs e)
-        {
-            Window.GetWindow(this).Close();
-        }
+        
     }
 }
