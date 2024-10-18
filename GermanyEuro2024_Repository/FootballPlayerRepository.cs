@@ -19,5 +19,20 @@ namespace GermanyEuro2024_Repository
         {
             return FootballPlayerDAO.Instance.GetFootballPlayerById(id);
         }
+
+        public void AddFootballPlayer(FootballPlayer footballPlayer)
+        {
+            FootballPlayerDAO.Instance.AddFootballPlayer(footballPlayer);
+        }
+
+        public void RemoveFootballPlayer(string id)
+        {
+            FootballPlayerDAO.Instance.RemoveFootballPlayer(id);
+        }
+
+        public void UpdateFootballPlayer(FootballPlayer updateFootballPlayer)
+        {
+            FootballPlayerDAO.Instance.UpdateFootballPlayer(updateFootballPlayer);
+        }
     }
 }

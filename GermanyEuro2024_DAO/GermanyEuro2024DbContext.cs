@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using GermanyEuro2024_BusinessObject;
+using Microsoft.Extensions.Configuration;
 
 namespace GermanyEuro2024_DAO;
 
@@ -23,9 +24,22 @@ public partial class GermanyEuro2024DbContext : DbContext
     public virtual DbSet<Uefaaccount> Uefaaccounts { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=Admin-PC\\HOA;uid=sa;pwd=12345;database=GermanyEuro2024DB;TrustServerCertificate=True;");
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            string connectionString = GetConnectionString();
+            optionsBuilder.UseSqlServer("Server=HOA-PC\\HOA;uid=sa;pwd=12345;database=GermanyEuro2024DB;TrustServerCertificate=True;");
+        }
+    }
+        
+    private string GetConnectionString()
+    {
+        IConfiguration configuration = new ConfigurationBuilder()
+                 .SetBasePath(Directory.GetCurrentDirectory())
+                 .AddJsonFile("appsettings.json", true, true).Build();
+        return configuration.GetConnectionString("DBConnect");
 
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<FootballPlayer>(entity =>

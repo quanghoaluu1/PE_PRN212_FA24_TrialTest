@@ -78,6 +78,46 @@ namespace GermanyEuro2024_LuuQuangHoa
             }
         }
 
-      
+        private void btn_delete_Click(object sender, RoutedEventArgs e)
+        {
+            _footballPlayerRepository.RemoveFootballPlayer(tbox_playerId.Text);
+
+        }
+
+        private void btn_update_Click(object sender, RoutedEventArgs e)
+        {
+            string id = tbox_playerId.Text;
+            FootballPlayer updateFootballPlayer = _footballPlayerRepository.GetFootballPlayerById(id);
+            updateFootballPlayer.PlayerName = tbox_playerName.Text;
+            updateFootballPlayer.Achievements = tbox_achivements.Text;
+            updateFootballPlayer.Award = tbox_award.Text;
+            updateFootballPlayer.FootballTeamId = cbbox_teamTitle.SelectedValue.ToString();
+            updateFootballPlayer.OriginCountry = tbox_country.Text;
+            _footballPlayerRepository.UpdateFootballPlayer(updateFootballPlayer);
+            loadDataInit();
+
+        }
+
+        private void btn_add_Click(object sender, RoutedEventArgs e)
+        {
+            FootballPlayer footballPlayer = new FootballPlayer();
+            footballPlayer.PlayerId = tbox_playerId.Text;
+            footballPlayer.PlayerName = tbox_playerName.Text;
+            footballPlayer.Achievements = tbox_achivements.Text;
+            footballPlayer.Award = tbox_award.Text;
+            footballPlayer.FootballTeamId = cbbox_teamTitle.SelectedValue.ToString();
+            footballPlayer.OriginCountry = tbox_country.Text;
+            footballPlayer.Birthday = DateTime.Parse(date_birthday.Text);
+            try { _footballPlayerRepository.AddFootballPlayer(footballPlayer); }
+            catch(Exception)
+            {
+                MessageBox.Show("ID duplicate");
+            }
+           
+            loadDataInit();
+
+        }
+
+        
     }
 }

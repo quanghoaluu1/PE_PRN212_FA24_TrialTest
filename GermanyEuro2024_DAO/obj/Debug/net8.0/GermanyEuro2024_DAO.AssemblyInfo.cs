@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GermanyEuro2024_DAO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9fbf14ab4c3e9ce70e89580b6d461a084c3ae88")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b1de32a3885005a6fb6745f7bea27b61bb6bd6e")]
 [assembly: System.Reflection.AssemblyProductAttribute("GermanyEuro2024_DAO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GermanyEuro2024_DAO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

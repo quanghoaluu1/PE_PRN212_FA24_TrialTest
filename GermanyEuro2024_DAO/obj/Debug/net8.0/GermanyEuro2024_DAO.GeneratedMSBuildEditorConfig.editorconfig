@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GermanyEuro2024_DAO
-build_property.ProjectDir = D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_DAO\
+build_property.ProjectDir = E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_DAO\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
