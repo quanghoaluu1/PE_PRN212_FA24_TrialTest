@@ -22,6 +22,7 @@ namespace GermanyEuro2024_LuuQuangHoa
     /// </summary>
     public partial class FootballManagement : Page
     {
+        private int? role = 0;
         private FootballPlayerRepository _footballPlayerRepository;
         private FootballTeamRepository _footballTeamRepository;
         public FootballManagement()
@@ -29,6 +30,39 @@ namespace GermanyEuro2024_LuuQuangHoa
             InitializeComponent();
             _footballPlayerRepository = new FootballPlayerRepository();
             _footballTeamRepository = new FootballTeamRepository();
+        }
+
+        public FootballManagement(int? role)
+        {
+            InitializeComponent();
+            _footballPlayerRepository = new FootballPlayerRepository();
+            _footballTeamRepository = new FootballTeamRepository();
+            this.role = role;
+            switch (role)
+            {
+                case 1:
+                case 2:
+                case 4:
+                    DisableAllButton();
+                    break;
+                case 3:
+                    break;
+                default:
+                    break;
+
+            }
+
+        }
+
+        private void DisableAllButton()
+        {
+            ForceCursor = true;
+            btn_add.IsEnabled = false;
+            btn_add.Cursor = Cursors.No;
+            btn_delete.IsEnabled = false;
+            btn_delete.Cursor = Cursors.No;
+            btn_update.IsEnabled = false;
+            btn_update.Cursor = Cursors.No;
         }
 
         public void Page_Loaded(object sender, RoutedEventArgs e)
@@ -67,6 +101,8 @@ namespace GermanyEuro2024_LuuQuangHoa
                 {
                     this.tbox_playerId.IsEnabled = false;
                     this.tbox_playerId.IsReadOnly = true;
+                    ForceCursor = true;
+                    tbox_playerId.Cursor = Cursors.No;
                     this.tbox_playerId.Text = footballPlayer.PlayerId;
                     this.tbox_playerName.Text = footballPlayer.PlayerName;
                     this.tbox_achivements.Text = footballPlayer.Achievements;
@@ -81,7 +117,7 @@ namespace GermanyEuro2024_LuuQuangHoa
         private void btn_delete_Click(object sender, RoutedEventArgs e)
         {
             _footballPlayerRepository.RemoveFootballPlayer(tbox_playerId.Text);
-
+            loadDataInit();
         }
 
         private void btn_update_Click(object sender, RoutedEventArgs e)

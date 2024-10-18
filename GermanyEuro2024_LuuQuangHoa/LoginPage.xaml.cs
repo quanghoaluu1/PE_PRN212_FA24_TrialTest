@@ -35,12 +35,13 @@ namespace GermanyEuro2024_LuuQuangHoa
             Uefaaccount uefaaccount = _uefaAccountRepository.GetUEFAAccountByEmail(tbox_email.Text);
             if (uefaaccount != null && uefaaccount.AccountPassword.Equals(tbox_password.Password))
             {
-                NavigationService.Navigate(new FootballManagement());
+                int? role = uefaaccount.Role;
+                NavigationService.Navigate(new FootballManagement(role));
 
             }
             else
             {
-                MessageBox.Show("Email or password is incorrect");
+                MessageBox.Show("You have no permission to access this function!");
             }
 
         }

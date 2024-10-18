@@ -23,7 +23,7 @@
         <Label Content="Football Team" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="446,89,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
 
         <!--Text Box-->
-        <TextBox x:Name="tbox_playerId" HorizontalAlignment="Left" Margin="148,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Foreground="Blue"/>
+        <TextBox x:Name="tbox_playerId" HorizontalAlignment="Left" Margin="148,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Foreground="Blue" ForceCursor="True"/>
         <TextBox x:Name="tbox_playerName" HorizontalAlignment="Left" Margin="148,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Foreground="Blue"/>
         <DatePicker x:Name="date_birthday" HorizontalAlignment="Left" Margin="148,171,0,0" VerticalAlignment="Top" Width="232" Foreground="Blue"/>
         <TextBox x:Name="tbox_award" HorizontalAlignment="Left" Margin="148,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" RenderTransformOrigin="0.485,0.763" Foreground="Blue"/>
