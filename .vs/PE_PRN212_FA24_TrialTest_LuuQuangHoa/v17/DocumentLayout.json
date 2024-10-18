@@ -50,8 +50,7 @@
               "RelativeToolTip": "GermanyEuro2024_BusinessObject\\FootballTeam.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T15:26:15.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T15:26:15.221Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "GermanyEuro2024_DAO\\GermanyEuro2024DbContext.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAuwD4AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T15:25:53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T15:25:53Z"
             },
             {
               "$type": "Document",
@@ -75,8 +73,7 @@
               "ToolTip": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest_LuuQuangHoa\\GermanyEuro2024_LuuQuangHoa\\FootballManagement.xaml",
               "RelativeToolTip": "GermanyEuro2024_LuuQuangHoa\\FootballManagement.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-17T15:23:02.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T15:23:02.936Z"
             },
             {
               "$type": "Document",
@@ -86,7 +83,7 @@
               "RelativeDocumentMoniker": "GermanyEuro2024_LuuQuangHoa\\FootballManagement.xaml.cs",
               "ToolTip": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest_LuuQuangHoa\\GermanyEuro2024_LuuQuangHoa\\FootballManagement.xaml.cs",
               "RelativeToolTip": "GermanyEuro2024_LuuQuangHoa\\FootballManagement.xaml.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwEkAAABWAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T15:22:51.921Z",
               "EditorCaption": ""
@@ -101,8 +98,7 @@
               "RelativeToolTip": "GermanyEuro2024_Repository\\FootballTeamRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T15:22:14.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T15:22:14.053Z"
             },
             {
               "$type": "Document",
@@ -114,8 +110,7 @@
               "RelativeToolTip": "GermanyEuro2024_Repository\\IFootballTeamRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T15:21:42.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T15:21:42.748Z"
             },
             {
               "$type": "Document",
@@ -127,8 +122,7 @@
               "RelativeToolTip": "GermanyEuro2024_DAO\\FootballTeamDAO.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwB8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T15:19:21.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T15:19:21.054Z"
             }
           ]
         }
