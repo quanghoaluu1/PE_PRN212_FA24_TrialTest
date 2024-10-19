@@ -10,3 +10,15 @@ D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_BusinessObject\o
 D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\refint\GermanyEuro2024_BusinessObject.dll
 D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.pdb
 D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\ref\GermanyEuro2024_BusinessObject.dll
+E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\bin\Debug\net8.0\GermanyEuro2024_BusinessObject.deps.json
+E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\bin\Debug\net8.0\GermanyEuro2024_BusinessObject.dll
+E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\bin\Debug\net8.0\GermanyEuro2024_BusinessObject.pdb
+E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.AssemblyInfoInputs.cache
+E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.AssemblyInfo.cs
+E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.csproj.CoreCompileInputs.cache
+E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.sourcelink.json
+E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.dll
+E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\refint\GermanyEuro2024_BusinessObject.dll
+E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.pdb
+E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\ref\GermanyEuro2024_BusinessObject.dll

@@ -38,5 +38,30 @@ namespace GermanyEuro2024_DAO
         {
             return _context.FootballPlayers.SingleOrDefault(m => m.PlayerId.Equals(id));
         }
+
+        public void AddFootballPlayer(FootballPlayer footballPlayer)
+        {
+            _context.FootballPlayers.Add(footballPlayer);
+            _context.SaveChanges();
+        }
+
+        public void RemoveFootballPlayer(string id)
+        {
+            _context.FootballPlayers.Remove(GetFootballPlayerById(id));
+            _context.SaveChanges();
+        }
+
+        public void UpdateFootballPlayer(FootballPlayer updateFootballPlayer)
+        {
+            FootballPlayer footballPlayer = GetFootballPlayerById(updateFootballPlayer.PlayerId);
+            footballPlayer.PlayerName = updateFootballPlayer.PlayerName;
+            footballPlayer.Achievements = updateFootballPlayer.Achievements;
+            footballPlayer.Award = updateFootballPlayer.Award;
+            footballPlayer.Birthday = updateFootballPlayer.Birthday;
+            footballPlayer.OriginCountry = updateFootballPlayer.OriginCountry;
+            footballPlayer.FootballTeamId = updateFootballPlayer.FootballTeamId;
+            _context.FootballPlayers.Update(updateFootballPlayer);
+            _context.SaveChanges();
+        }
     }
 }
