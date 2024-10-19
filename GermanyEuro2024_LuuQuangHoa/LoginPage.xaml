@@ -13,7 +13,7 @@
     <Grid>
         <Label x:Name="label_email" Content="Email" HorizontalAlignment="Left" Margin="191,150,0,0" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="13" />
         <Label x:Name="label_password" Content="Password" HorizontalAlignment="Left" Margin="191,215,0,0" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="13"/>
-        <TextBox x:Name="tbox_email" Text="admin@uefa.com" HorizontalAlignment="Left" Margin="263,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="26"/>
+        <TextBox x:Name="tbox_email" Text="manager@uefa.com" HorizontalAlignment="Left" Margin="263,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="26"/>
         <PasswordBox x:Name="tbox_password"  HorizontalAlignment="Left" Margin="263,215,0,0" VerticalAlignment="Top" Width="184" Height="26" Password="@5"/>
         <TextBlock x:Name="label_login" HorizontalAlignment="Center" Margin="0,51,0,0" TextWrapping="Wrap" Text="Login Page" VerticalAlignment="Top" FontSize="36"/>
         <Button x:Name="btn_login" Content="Login" HorizontalAlignment="Left" Margin="350,280,0,0" VerticalAlignment="Top" Height="42" Width="100" Background="Lime" Click="btn_login_Click" IsDefault="True"/>

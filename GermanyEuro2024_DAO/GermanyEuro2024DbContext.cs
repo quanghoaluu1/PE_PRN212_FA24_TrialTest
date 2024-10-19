@@ -28,7 +28,7 @@ public partial class GermanyEuro2024DbContext : DbContext
         if (!optionsBuilder.IsConfigured)
         {
             string connectionString = GetConnectionString();
-            optionsBuilder.UseSqlServer("Server=HOA-PC\\HOA;uid=sa;pwd=12345;database=GermanyEuro2024DB;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=ADMIN-PC\\HOA;uid=sa;pwd=12345;database=GermanyEuro2024DB;TrustServerCertificate=True;");
         }
     }
         

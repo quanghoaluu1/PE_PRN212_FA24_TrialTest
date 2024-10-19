@@ -15,5 +15,7 @@ namespace GermanyEuro2024_Repository
         public void AddFootballPlayer(FootballPlayer footballPlayer);
         public void RemoveFootballPlayer(string id);
         public void UpdateFootballPlayer(FootballPlayer updateFootballPlayer);
+        public List<FootballPlayer> FindFootballPlayersByName(string name);
+        public List<FootballPlayer> FindFootballPlayersByAchievements(string achievements);
     }
 }

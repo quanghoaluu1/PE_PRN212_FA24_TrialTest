@@ -14,4 +14,9 @@ public partial class FootballTeam
     public string ManagerName { get; set; } = null!;
 
     public virtual ICollection<FootballPlayer> FootballPlayers { get; set; } = new List<FootballPlayer>();
+
+    public override string ToString()
+    {
+        return TeamTitle;
+    }
 }

@@ -63,5 +63,16 @@ namespace GermanyEuro2024_DAO
             _context.FootballPlayers.Update(updateFootballPlayer);
             _context.SaveChanges();
         }
+
+        public List<FootballPlayer> FindFootballPlayersByName(string name)
+        {
+            List<FootballPlayer> footballPlayers = _context.FootballPlayers.Where(m => m.PlayerName.Contains(name)).ToList();
+            return footballPlayers;
+        }
+        public List<FootballPlayer> FindFootballPlayersByAchievements(string achievements)
+        {
+            List<FootballPlayer> footballPlayers = _context.FootballPlayers.Where(m => m.Achievements.Contains(achievements)).ToList();
+            return footballPlayers;
+        }
     }
 }

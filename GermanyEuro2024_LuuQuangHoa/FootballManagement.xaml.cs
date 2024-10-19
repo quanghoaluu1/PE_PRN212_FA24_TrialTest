@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -58,11 +59,12 @@ namespace GermanyEuro2024_LuuQuangHoa
         {
             ForceCursor = true;
             btn_add.IsEnabled = false;
-            btn_add.Cursor = Cursors.No;
             btn_delete.IsEnabled = false;
-            btn_delete.Cursor = Cursors.No;
             btn_update.IsEnabled = false;
-            btn_update.Cursor = Cursors.No;
+            tbox_search.IsEnabled = false;
+            btn_search.IsEnabled = false;
+            rbtn_byName.IsEnabled = false;
+            rbtn_byAchievement.IsEnabled = false;
         }
 
         public void Page_Loaded(object sender, RoutedEventArgs e)
@@ -72,7 +74,13 @@ namespace GermanyEuro2024_LuuQuangHoa
 
         private void loadDataInit()
         {
-            this.dtg_footballPlayerInformation.ItemsSource = _footballPlayerRepository.GetFootballPlayerList();
+            List<FootballTeam> footballTeams = _footballTeamRepository.GetAllTeams();
+            List<FootballPlayer> footballPlayers = _footballPlayerRepository.GetFootballPlayerList();
+            this.dtg_footballPlayerInformation.ItemsSource = footballPlayers;
+            foreach(FootballPlayer footballPlayer in footballPlayers)
+            {
+                footballPlayer.FootballTeam = footballTeams.FirstOrDefault(m => m.FootballTeamId.Equals(footballPlayer.FootballTeamId));
+            }
             this.cbbox_teamTitle.ItemsSource = _footballTeamRepository.GetAllTeams();
             this.cbbox_teamTitle.DisplayMemberPath = "TeamTitle";
             this.cbbox_teamTitle.SelectedValuePath = "FootballTeamId";
@@ -82,6 +90,8 @@ namespace GermanyEuro2024_LuuQuangHoa
             tbox_award.Text = "";
             tbox_country.Text = "";
             date_birthday.Text = "";
+
+
         }
 
         private void dtg_footballPlayerInformation_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -116,8 +126,14 @@ namespace GermanyEuro2024_LuuQuangHoa
 
         private void btn_delete_Click(object sender, RoutedEventArgs e)
         {
-            _footballPlayerRepository.RemoveFootballPlayer(tbox_playerId.Text);
-            loadDataInit();
+            MessageBoxResult result = MessageBox.Show("Do you want to delete this player?", "Delete", MessageBoxButton.YesNo);
+            if(result == MessageBoxResult.Yes)
+            {
+                _footballPlayerRepository.RemoveFootballPlayer(tbox_playerId.Text);
+                loadDataInit();
+            }
+            
+
         }
 
         private void btn_update_Click(object sender, RoutedEventArgs e)
@@ -139,21 +155,93 @@ namespace GermanyEuro2024_LuuQuangHoa
             FootballPlayer footballPlayer = new FootballPlayer();
             footballPlayer.PlayerId = tbox_playerId.Text;
             footballPlayer.PlayerName = tbox_playerName.Text;
+            if (!IsValidName(footballPlayer.PlayerName))
+            {
+                MessageBox.Show("Invalid name");
+                return;
+            }
             footballPlayer.Achievements = tbox_achivements.Text;
             footballPlayer.Award = tbox_award.Text;
             footballPlayer.FootballTeamId = cbbox_teamTitle.SelectedValue.ToString();
             footballPlayer.OriginCountry = tbox_country.Text;
             footballPlayer.Birthday = DateTime.Parse(date_birthday.Text);
-            try { _footballPlayerRepository.AddFootballPlayer(footballPlayer); }
-            catch(Exception)
+            if(footballPlayer.Birthday > new DateTime(2004,1,1))
             {
-                MessageBox.Show("ID duplicate");
+                MessageBox.Show("Player must be born before 2004");
+                return;
+            }
+            List<TextBox> textBoxes = new List<TextBox>{ tbox_playerId, tbox_playerName, tbox_achivements, tbox_award, tbox_country };
+            foreach (TextBox textBox in textBoxes)
+            {
+                if (string.IsNullOrEmpty(textBox.Text))
+                {
+                    MessageBox.Show("Please fill all the information");
+                    return;
+                }
+            }
+            try { _footballPlayerRepository.AddFootballPlayer(footballPlayer); }
+            catch(Exception a)
+            {
+                MessageBox.Show(a.Message);
             }
            
             loadDataInit();
 
         }
+        private bool IsValidName(string name)
+        {
+            bool result = true;
+            if (name.Length < 3 || name.Length > 100)
+            {
+                result = false;
+            }
+            if (!Regex.IsMatch(name, @"^[A-Za-z0-9 ]+$"))
+            {
+                result = false;
+            }
+            string[] words = name.Split(' ');
+            foreach (string word in words)
+            {
+                if (!Regex.IsMatch(word, @"^[A-Z0-9]"))
+                {
+                    result = false;
+                }
+            }
+            return result;
+        }
 
-        
+            private void btn_search_Click(object sender, RoutedEventArgs e)
+            {
+            string searchValue = tbox_search.Text;
+            if (string.IsNullOrEmpty(searchValue))
+            {
+                MessageBox.Show("Please enter search value");
+            }
+            else if (rbtn_byName.IsChecked == true)
+            {
+                List<FootballPlayer> footballPlayers = _footballPlayerRepository.FindFootballPlayersByName(searchValue);
+                if (footballPlayers.Count == 0)
+                {
+                    MessageBox.Show("No result found");
+                }
+                else
+                {
+                    this.dtg_footballPlayerInformation.ItemsSource = footballPlayers;
+                }
+            }
+            else if (rbtn_byAchievement.IsChecked == true)
+            {
+                List<FootballPlayer> footballPlayers = _footballPlayerRepository.FindFootballPlayersByAchievements(searchValue);
+                if (footballPlayers.Count == 0)
+                {
+                    MessageBox.Show("No result found");
+                }
+                else
+                {
+                    this.dtg_footballPlayerInformation.ItemsSource = footballPlayers;
+                }
+
+            }
+        }
     }
 }

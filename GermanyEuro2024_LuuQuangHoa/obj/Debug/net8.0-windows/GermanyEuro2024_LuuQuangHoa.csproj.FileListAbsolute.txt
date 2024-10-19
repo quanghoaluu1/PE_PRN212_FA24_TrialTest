@@ -162,3 +162,9 @@ E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-wind
 E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
 E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
 E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
