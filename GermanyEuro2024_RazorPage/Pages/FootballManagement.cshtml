@@ -1,0 +1,126 @@
+﻿@page
+@model GermanyEuro2024_RazorPage.Pages.FootballManagement
+@{
+    ViewData["Title"] = "Football Player Management";
+}
+@if (TempData["SuccessMessage"] != null)
+{
+<div style="background-color: #dff0d8; color: #3c763d; padding: 15px; margin-bottom: 20px; border: 1px solid #d6e9c6; border-radius: 4px;">
+    @TempData["SuccessMessage"]
+</div>
+}
+@* *@
+@* @if (!ModelState.IsValid) *@
+@* { *@
+@* <div style="background-color: #f2dede; color: #a94442; padding: 15px; margin-bottom: 20px; border: 1px solid #ebccd1; border-radius: 4px;"> *@
+@*     <ul> *@
+@*         @foreach (var error in ModelState.Values.SelectMany(v => v.Errors)) *@
+@*         { *@
+@*         <li>@error.ErrorMessage</li> *@
+@*         } *@
+@*     </ul> *@
+@* </div> *@
+@* } *@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+<div>
+    <h1>Football Management</h1>
+    <form method="post" asp-page-handler="Search">
+        <input type="text" name="searchTerm"/>
+        <div>
+            <label>
+                <input type="radio" name="searchBy" value="name" checked="" />
+                By Name
+            </label>
+            <label>
+                <input type="radio" name="searchBy" value="achievement"/>
+                By <A></A>chievement
+            </label>
+        </div>
+        <button type="submit">Search</button>
+    </form>
+    <form method="post" >
+    <div>
+        <label style="font-size: 13px; font-family: Tahoma;">Player ID</label>
+        <input type="text" id="tbox_playerId" asp-for="SelectedFootballPlayer.PlayerId" style="width: 100%; color: blue"/>
+
+        <label style="color: #0000ff; font-family: Tahoma;">Player Name</label>
+        <input type="text" id="tbox_playerName" asp-for="SelectedFootballPlayer.PlayerName" style="width: 100%; color: blue;"/>
+
+        <label style="color: #0000ff; font-family: Tahoma;">Achievements</label>
+        <textarea id="tbox_achivements" asp-for="SelectedFootballPlayer.Achievements" style="width: 100%; color: blue; height: 50px;"></textarea>
+
+        <label style="color: #0000ff; font-family: Tahoma;">Birthday</label>
+        <input type="date" id="date_birthday" asp-for="SelectedFootballPlayer.Birthday" style="width: 100%; color: blue;"/>
+
+        <label style="color: #0000ff; font-family: Tahoma;">Original Country</label>
+        <input type="text" id="tbox_country" asp-for="SelectedFootballPlayer.OriginCountry" style="width: 100%; color: blue;"/>
+
+        <label style="color: #0000ff; font-family: Tahoma;">Award</label>
+        <input type="text" id="tbox_award" asp-for="SelectedFootballPlayer.Award" style="width: 100%; color: blue;"/>
+
+        <label style="color: #0000ff; font-family: Tahoma;">Football Team</label>
+        <select id="cbbox_teamTitle" asp-for="SelectedFootballPlayer.FootballTeamId" asp-items="Model.Teams" style="width: 100%;">
+            <option value="">Select Team</option>
+        </select>
+        
+        <button type="submit" asp-page-handler="Add">Add</button>
+        <button type="submit" asp-page-handler="Update">Update</button>
+        <button type="submit" asp-page-handler="Delete">Delete</button>
+        <button type="submit" asp-page-handler="Clear">Clear</button>
+    </div>
+    </form>
+    
+    <div>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Player ID</th>
+                <th>Player Name</th>
+                <th>Achievements</th>
+                <th>Birthday</th>
+                <th>Country</th>
+                <th>Award</th>
+                <th>Football Team</th>
+                <th>Select</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var player in Model.FootballPlayers)
+            {
+                <tr>
+                    <td>@player.PlayerId</td>
+                    <td>@player.PlayerName</td>
+                    <td>@player.Achievements</td>
+                    <td>@player.Birthday.ToString()</td>
+                    <td>@player.OriginCountry</td>
+                    <td>@player.Award</td>
+                    <td>@player.FootballTeam?.TeamTitle</td>
+                    <td>
+                        <form method="post" asp-page-handler="Select">
+                            <input type="hidden" name="footballPlayerId" value="@player.PlayerId"/>
+                            <button type="submit">Select</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        
+        
+    </div>
+
+</div>
+
+</body>
+</html>

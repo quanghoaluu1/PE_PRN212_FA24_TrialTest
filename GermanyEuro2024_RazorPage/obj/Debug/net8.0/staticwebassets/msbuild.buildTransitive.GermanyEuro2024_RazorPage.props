@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\GermanyEuro2024_RazorPage.props" />
+</Project>

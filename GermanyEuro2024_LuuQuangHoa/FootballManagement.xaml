@@ -4,54 +4,44 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GermanyEuro2024_LuuQuangHoa"
-      mc:Ignorable="d"
       Title="PE118801- Main PE Management Window"
       FontFamily="Tahoma" FontSize="13"
-      Background="#FFF2F184" Loaded="Page_Loaded" Height="500" Width="800">
+        mc:Ignorable="d"
+        d:DesignHeight="400" d:DesignWidth="700"
+      Height="400" Width="700"
+      Background="#FFF2F184" Loaded="Page_Loaded">
 
     <Grid>
 
         <!--Label-->
         <Label Content="Football Player Information" FontFamily="Tahoma" Foreground="#0000ff"  HorizontalAlignment="Left" Margin="175,10,0,0" VerticalAlignment="Top" FontSize="36" HorizontalContentAlignment="Left" Grid.ColumnSpan="2" />
-        <Label Content="Player ID" FontFamily="Tahoma" FontSize="13"  Foreground="#0000ff" HorizontalAlignment="Left" Margin="50,89,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
-        <Label Content="Player Name" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="50,124,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
-        <Label Content="Achivements" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="446,158,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
-        <Label Content="Birthday" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="50,163,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
-        <Label Content="Original Country" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="446,124,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
-        <Label Content="Award" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="50,205,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
-        <Label Content="Football Team" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="446,89,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
+        <Label Content="Player ID" FontFamily="Tahoma" FontSize="13"  Foreground="#0000ff" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
+        <Label Content="Player Name" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
+        <Label Content="Achivements" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="395,158,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
+        <Label Content="Birthday" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
+        <Label Content="Original Country" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="395,124,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
+        <Label Content="Award" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
+        <Label Content="Football Team" FontFamily="Tahoma" FontSize="13" Foreground="#0000ff" HorizontalAlignment="Left" Margin="395,89,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left"/>
 
         <!--Text Box-->
-        <TextBox x:Name="tbox_playerId" HorizontalAlignment="Left" Margin="148,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Foreground="Blue" ForceCursor="True" />
-        <TextBox x:Name="tbox_playerName" HorizontalAlignment="Left" Margin="148,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Foreground="Blue"/>
-        <DatePicker x:Name="date_birthday" HorizontalAlignment="Left" Margin="148,171,0,0" VerticalAlignment="Top" Width="232" Foreground="Blue"/>
-        <TextBox x:Name="tbox_award" HorizontalAlignment="Left" Margin="148,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" RenderTransformOrigin="0.485,0.763" Foreground="Blue"/>
-        <TextBox x:Name="tbox_country" HorizontalAlignment="Left" Margin="570,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" RenderTransformOrigin="0.562,0.678" Foreground="Blue" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbox_achivements" HorizontalAlignment="Left" Margin="446,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="296" Height="42" Foreground="Blue" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbox_playerId" HorizontalAlignment="Left" Margin="118,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Foreground="Blue" ForceCursor="True" />
+        <TextBox x:Name="tbox_playerName" HorizontalAlignment="Left" Margin="118,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Foreground="Blue"/>
+        <DatePicker x:Name="date_birthday" HorizontalAlignment="Left" Margin="118,171,0,0" VerticalAlignment="Top" Width="232" Foreground="Blue"/>
+        <TextBox x:Name="tbox_award" HorizontalAlignment="Left" Margin="118,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" RenderTransformOrigin="0.485,0.763" Foreground="Blue"/>
+        <TextBox x:Name="tbox_country" HorizontalAlignment="Left" Margin="503,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" RenderTransformOrigin="0.562,0.678" Foreground="Blue"/>
+        <TextBox x:Name="tbox_achivements" HorizontalAlignment="Left" Margin="395,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Height="42" Foreground="Blue"/>
 
-        <DataGrid x:Name="dtg_footballPlayerInformation" d:ItemsSource="{d:SampleData}" Margin="0,250,0,94" SelectionChanged="dtg_footballPlayerInformation_SelectionChanged" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="805">
-            <!--
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Player ID" Binding="{Binding PlayerID}" Width="100"/>
-                <DataGridTextColumn Header="Player Name" Binding="{Binding PlayerName}" Width="200"/>
-                <DataGridTextColumn Header="Birthday" Binding="{Binding Birthday}" Width="100"/>
-                <DataGridTextColumn Header="Award" Binding="{Binding Award}" Width="200"/>
-                <DataGridTextColumn Header="Football Team" Binding="{Binding FootballTeam}" Width="200"/>
-                <DataGridTextColumn Header="Original Country" Binding="{Binding OriginalCountry}" Width="200"/>
-                <DataGridTextColumn Header="Achivements" Binding="{Binding Achivements}" Width="200"/>
-            </DataGrid.Columns>
-            -->
-        </DataGrid>
-        <ComboBox x:Name="cbbox_teamTitle"  Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="570,89,0,0" VerticalAlignment="Top" Width="172"/>
-        <Button x:Name="btn_add" Content="Add" HorizontalAlignment="Left" Margin="73,424,0,0" VerticalAlignment="Top" Height="56" Width="114" Background="lime" Click="btn_add_Click"/>
-        <Button x:Name="btn_delete" Content="Delete" HorizontalAlignment="Left" Margin="338,419,0,0" VerticalAlignment="Top" Height="56" Width="114" Background="red" Click="btn_delete_Click"/>
-        <Button x:Name="btn_update" Content="Update" HorizontalAlignment="Left" Margin="599,424,0,0" VerticalAlignment="Top" Height="56" Width="114" Background="Yellow" Click="btn_update_Click"/>
-        
+        <DataGrid x:Name="dtg_footballPlayerInformation"  Margin="0,231,0,67" SelectionChanged="dtg_footballPlayerInformation_SelectionChanged" HorizontalAlignment="Center" Width="700"/>
+
+        <ComboBox x:Name="cbbox_teamTitle" HorizontalAlignment="Left" Margin="503,91,0,0" VerticalAlignment="Top" Width="172"/>
+        <Button x:Name="btn_add" Content="Add" Margin="33,333,576,24" Background="lime" Click="btn_add_Click"/>
+        <Button x:Name="btn_delete" Content="Delete" Margin="234,333,374,22" Background="red" Click="btn_delete_Click"/>
+        <Button x:Name="btn_update" Content="Update"  Margin="404,333,222,20" Background="Yellow" Click="btn_update_Click"/>
+
         <RadioButton x:Name="rbtn_byName" Content="By Name" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="rbtn_byAchievement" Content="By Achievement" HorizontalAlignment="Left" Margin="24,37,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbox_search" HorizontalAlignment="Left" Margin="24,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btn_search" Content="Search" HorizontalAlignment="Left" Margin="144,60,0,0" VerticalAlignment="Top" Height="18" Width="43" Click="btn_search_Click"/>
-
-
+        <Button x:Name="btn_clear" Content="Clear"  Margin="574,333,52,20" Background="#FF00DDF9" Click="btn_clear_Click"/>
     </Grid>
 </Page>

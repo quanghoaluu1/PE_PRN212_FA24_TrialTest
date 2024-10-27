@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GermanyEuro2024_LuuQuangHoa"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="700"
-        FontFamily="Tahoma" FontSize="13"
-        Background="#FFF2F184" WindowStartupLocation="CenterScreen">
+        Title="MainWindow"
+        Width="700" Height="400"
+        Background="#FFF2F184"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
      </Grid>

@@ -168,3 +168,4 @@ D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_LuuQuangHoa\bin\
 D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
 D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
 D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\C#\.NET\PE_PRN212_FA24_TrialTest_LuuQuangHoa\GermanyEuro2024_LuuQuangHoa\bin\Debug\net8.0-windows\appsettings.json

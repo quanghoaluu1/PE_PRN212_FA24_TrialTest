@@ -12,5 +12,11 @@
     <ProjectReference Include="..\GermanyEuro2024_Repository\GermanyEuro2024_Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 
 </Project>

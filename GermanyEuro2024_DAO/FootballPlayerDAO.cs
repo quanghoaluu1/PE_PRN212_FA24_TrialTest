@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace GermanyEuro2024_DAO
 {
@@ -31,12 +32,12 @@ namespace GermanyEuro2024_DAO
 
         public List<FootballPlayer> GetFootballPlayerList()
         {
-            return _context.FootballPlayers.ToList();
+            return _context.FootballPlayers.Include(p => p.FootballTeam).ToList();
         }
 
         public FootballPlayer GetFootballPlayerById(string id)
         {
-            return _context.FootballPlayers.SingleOrDefault(m => m.PlayerId.Equals(id));
+            return _context.FootballPlayers.Include(p => p.FootballTeam).SingleOrDefault(m => m.PlayerId.Equals(id));
         }
 
         public void AddFootballPlayer(FootballPlayer footballPlayer)

@@ -77,10 +77,7 @@ namespace GermanyEuro2024_LuuQuangHoa
             List<FootballTeam> footballTeams = _footballTeamRepository.GetAllTeams();
             List<FootballPlayer> footballPlayers = _footballPlayerRepository.GetFootballPlayerList();
             this.dtg_footballPlayerInformation.ItemsSource = footballPlayers;
-            foreach(FootballPlayer footballPlayer in footballPlayers)
-            {
-                footballPlayer.FootballTeam = footballTeams.FirstOrDefault(m => m.FootballTeamId.Equals(footballPlayer.FootballTeamId));
-            }
+            
             this.cbbox_teamTitle.ItemsSource = _footballTeamRepository.GetAllTeams();
             this.cbbox_teamTitle.DisplayMemberPath = "TeamTitle";
             this.cbbox_teamTitle.SelectedValuePath = "FootballTeamId";
@@ -242,6 +239,14 @@ namespace GermanyEuro2024_LuuQuangHoa
                 }
 
             }
+        }
+
+        private void btn_clear_Click(object sender, RoutedEventArgs e)
+        {
+            loadDataInit();
+            this.tbox_playerId.IsEnabled = true;
+            this.tbox_playerId.IsReadOnly = false;
+
         }
     }
 }
