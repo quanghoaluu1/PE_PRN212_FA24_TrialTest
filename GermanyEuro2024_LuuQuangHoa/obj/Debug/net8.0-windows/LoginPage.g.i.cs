@@ -109,7 +109,7 @@ namespace GermanyEuro2024_LuuQuangHoa {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GermanyEuro2024_LuuQuangHoa;component/loginpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GermanyEuro2024_LuuQuangHoa;V1.0.0.0;component/loginpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\LoginPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
