@@ -1,4 +1,5 @@
-﻿using GermanyEuro2024_BusinessObject;
+﻿using System.Text.RegularExpressions;
+using GermanyEuro2024_BusinessObject;
 using GermanyEuro2024_Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -94,7 +95,19 @@ public class FootballManagement : PageModel
             FootballPlayer newFootballPlayer = new FootballPlayer();
             newFootballPlayer.PlayerId = SelectedFootballPlayer.PlayerId;
             newFootballPlayer.PlayerName = SelectedFootballPlayer.PlayerName;
+            if (!isValidName(SelectedFootballPlayer.PlayerName))
+            {
+                TempData["Error"] = "Please enter a valid name";
+                LoadDataInit();
+                return Page();
+            }
             newFootballPlayer.Birthday = SelectedFootballPlayer.Birthday;
+            if (SelectedFootballPlayer.Birthday > new DateTime(2004, 1, 1))
+            {
+                TempData["Error"] = "We don't accept players younger than 2004";
+                LoadDataInit();
+                return Page();
+            }
             newFootballPlayer.Achievements = SelectedFootballPlayer.Achievements;
             newFootballPlayer.Award = SelectedFootballPlayer.Award;
             newFootballPlayer.OriginCountry = SelectedFootballPlayer.OriginCountry;
@@ -112,20 +125,50 @@ public class FootballManagement : PageModel
         return Page();
     }
 
+    private bool isValidName(string name)
+    {
+        bool result = !(name.Length < 3 || name.Length > 100);
+        if (!Regex.IsMatch(name, @"^[A-Za-z0-9 ]+$"))
+        {
+            result = false;
+        }
+        string[] words = name.Split(' ');
+        foreach (string word in words)
+        {
+            if (!Regex.IsMatch(word, @"^[A-Z0-9]"))
+            {
+                result = false;
+            }
+        }
+        return result;
+    }
+
     public IActionResult OnPostDelete()
     {
-        _footballPlayerRepository.RemoveFootballPlayer(SelectedFootballPlayer.PlayerId);
-        SelectedFootballPlayer = new FootballPlayer();
-        FootballPlayers = _footballPlayerRepository.GetFootballPlayerList();
-        TempData["SuccessMessage"] = "Delete player successfully.";
-        return Page();
+            _footballPlayerRepository.RemoveFootballPlayer(SelectedFootballPlayer.PlayerId);
+            SelectedFootballPlayer = new FootballPlayer();
+            FootballPlayers = _footballPlayerRepository.GetFootballPlayerList();
+            TempData["SuccessMessage"] = "Delete player successfully.";
+            return Page();
     }
 
     public IActionResult OnPostUpdate()
     {
         FootballPlayer updateFootballPlayer = _footballPlayerRepository.GetFootballPlayerById(SelectedFootballPlayer.PlayerId);
         updateFootballPlayer.PlayerName = SelectedFootballPlayer.PlayerName;
+        if (!isValidName(SelectedFootballPlayer.PlayerName))
+        {
+            TempData["Error"] = "Please enter a valid name";
+            LoadDataInit();
+            return Page();
+        }
         updateFootballPlayer.Birthday = SelectedFootballPlayer.Birthday;
+        if (SelectedFootballPlayer.Birthday > new DateTime(2004, 1, 1))
+        {
+            TempData["Error"] = "We don't accept players younger than 2004";
+            LoadDataInit();
+            return Page();
+        }
         updateFootballPlayer.Achievements = SelectedFootballPlayer.Achievements;
         updateFootballPlayer.Award = SelectedFootballPlayer.Award;
         updateFootballPlayer.OriginCountry = SelectedFootballPlayer.OriginCountry;

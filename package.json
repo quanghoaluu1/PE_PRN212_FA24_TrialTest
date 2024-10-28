@@ -1,0 +1,17 @@
+{
+  "name": "pe_prn212_fa24_trialtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quanghoaluu1/PE_PRN212_FA24_TrialTest.git"
+  },
+  "private": true,
+  "dependencies": {
+    "mdb-ui-kit": "^8.0.0"
+  }
+}

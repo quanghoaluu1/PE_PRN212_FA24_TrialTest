@@ -22,3 +22,15 @@ E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\G
 E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\refint\GermanyEuro2024_BusinessObject.dll
 E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.pdb
 E:\C#\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\ref\GermanyEuro2024_BusinessObject.dll
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\bin\Debug\net8.0\GermanyEuro2024_BusinessObject.deps.json
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\bin\Debug\net8.0\GermanyEuro2024_BusinessObject.dll
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\bin\Debug\net8.0\GermanyEuro2024_BusinessObject.pdb
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.AssemblyInfoInputs.cache
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.AssemblyInfo.cs
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.csproj.CoreCompileInputs.cache
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.sourcelink.json
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.dll
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\refint\GermanyEuro2024_BusinessObject.dll
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\GermanyEuro2024_BusinessObject.pdb
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_BusinessObject\obj\Debug\net8.0\ref\GermanyEuro2024_BusinessObject.dll

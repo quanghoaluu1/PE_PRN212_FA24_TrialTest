@@ -3103,23 +3103,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\quang\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest_LuuQuangHoa\\GermanyEuro2024_RazorPage\\GermanyEuro2024_RazorPage.csproj",
+      "projectUniqueName": "E:\\C#\\TrialTest\\PE_PRN212_FA24_TrialTest\\GermanyEuro2024_RazorPage\\GermanyEuro2024_RazorPage.csproj",
       "projectName": "GermanyEuro2024_RazorPage",
-      "projectPath": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest_LuuQuangHoa\\GermanyEuro2024_RazorPage\\GermanyEuro2024_RazorPage.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest_LuuQuangHoa\\GermanyEuro2024_RazorPage\\obj\\",
+      "projectPath": "E:\\C#\\TrialTest\\PE_PRN212_FA24_TrialTest\\GermanyEuro2024_RazorPage\\GermanyEuro2024_RazorPage.csproj",
+      "packagesPath": "C:\\Users\\quang\\.nuget\\packages\\",
+      "outputPath": "E:\\C#\\TrialTest\\PE_PRN212_FA24_TrialTest\\GermanyEuro2024_RazorPage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\quang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3135,8 +3135,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest_LuuQuangHoa\\GermanyEuro2024_Repository\\GermanyEuro2024_Repository.csproj": {
-              "projectPath": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest_LuuQuangHoa\\GermanyEuro2024_Repository\\GermanyEuro2024_Repository.csproj"
+            "E:\\C#\\TrialTest\\PE_PRN212_FA24_TrialTest\\GermanyEuro2024_Repository\\GermanyEuro2024_Repository.csproj": {
+              "projectPath": "E:\\C#\\TrialTest\\PE_PRN212_FA24_TrialTest\\GermanyEuro2024_Repository\\GermanyEuro2024_Repository.csproj"
             }
           }
         }
@@ -3174,7 +3174,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
