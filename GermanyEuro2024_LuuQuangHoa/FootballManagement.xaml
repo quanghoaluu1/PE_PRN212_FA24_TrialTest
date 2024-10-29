@@ -6,9 +6,7 @@
       xmlns:local="clr-namespace:GermanyEuro2024_LuuQuangHoa"
       Title="PE118801- Main PE Management Window"
       FontFamily="Tahoma" FontSize="13"
-        mc:Ignorable="d"
-        d:DesignHeight="400" d:DesignWidth="700"
-      Height="400" Width="700"
+mc:Ignorable="d"
       Background="#FFF2F184" Loaded="Page_Loaded">
 
     <Grid>

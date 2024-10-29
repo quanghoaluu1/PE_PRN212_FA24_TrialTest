@@ -36,7 +36,8 @@ namespace GermanyEuro2024_LuuQuangHoa
             if (uefaaccount != null && uefaaccount.AccountPassword.Equals(tbox_password.Password))
             {
                 int? role = uefaaccount.Role;
-                NavigationService.Navigate(new FootballManagement(role));
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
 
             }
             else

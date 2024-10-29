@@ -9,7 +9,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ball.png" />
+    <None Remove="Football_field.png" />
+    <None Remove="germany.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GermanyEuro2024_Repository\GermanyEuro2024_Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="ball.png" />
+    <Resource Include="Football_field.png" />
+    <Resource Include="germany.png" />
+    <None Remove="detail.png" />
+    <Resource Include="detail.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="footballDetail.jpg" />
+    <Resource Include="footballDetail.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

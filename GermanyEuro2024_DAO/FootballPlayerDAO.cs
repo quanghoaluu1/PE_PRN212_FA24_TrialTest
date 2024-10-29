@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using GermanyEuro2024_DAO.DTOs;
 
 namespace GermanyEuro2024_DAO
 {
@@ -74,6 +75,22 @@ namespace GermanyEuro2024_DAO
         {
             List<FootballPlayer> footballPlayers = _context.FootballPlayers.Where(m => m.Achievements.Contains(achievements)).ToList();
             return footballPlayers;
+        }
+
+        public List<FootballPlayerDTO> ConvertToDTOList(List<FootballPlayer> players)
+        {
+            List<FootballPlayerDTO> footballPlayerDTOs = new List<FootballPlayerDTO>();
+            foreach (FootballPlayer player in players)
+            {
+                FootballPlayerDTO footballPlayerDTO = new FootballPlayerDTO();
+                footballPlayerDTO.PlayerID = player.PlayerId;
+                footballPlayerDTO.PlayerName = player.PlayerName;
+                footballPlayerDTO.Achievement = player.Achievements;
+                footballPlayerDTO.Birthday = player.Birthday?.ToString("dd/MM/yyyy");
+                footballPlayerDTO.TeamTitle = player.FootballTeam.TeamTitle;
+                footballPlayerDTOs.Add(footballPlayerDTO);
+            }
+            return footballPlayerDTOs;
         }
     }
 }

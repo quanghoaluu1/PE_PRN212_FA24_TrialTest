@@ -255,3 +255,9 @@ E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\obj\Debug\n
 E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\obj\Debug\net8.0-windows\GermanyEuro2024_LuuQuangHoa.pdb
 E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\obj\Debug\net8.0-windows\GermanyEuro2024_LuuQuangHoa.genruntimeconfig.cache
 E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\obj\Debug\net8.0-windows\ref\GermanyEuro2024_LuuQuangHoa.dll
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\obj\Debug\net8.0-windows\LoginWindow.g.cs
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\obj\Debug\net8.0-windows\LoginWindow.baml
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\obj\Debug\net8.0-windows\PlayerInformation.g.cs
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\obj\Debug\net8.0-windows\PlayerInformation.baml
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\obj\Debug\net8.0-windows\PlayerDetail.g.cs
+E:\C#\TrialTest\PE_PRN212_FA24_TrialTest\GermanyEuro2024_LuuQuangHoa\obj\Debug\net8.0-windows\PlayerDetail.baml

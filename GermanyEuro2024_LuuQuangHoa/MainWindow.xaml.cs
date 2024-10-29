@@ -21,9 +21,12 @@ namespace GermanyEuro2024_LuuQuangHoa
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new LoginPage());
+            MainFrame.Navigate(new PlayerInformation());
+        }
+        private void NavigateToPage1(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new PlayerInformation());
         }
 
-        
     }
 }

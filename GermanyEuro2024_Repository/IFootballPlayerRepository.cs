@@ -1,4 +1,5 @@
 ﻿using GermanyEuro2024_BusinessObject;
+using GermanyEuro2024_DAO.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +18,7 @@ namespace GermanyEuro2024_Repository
         public void UpdateFootballPlayer(FootballPlayer updateFootballPlayer);
         public List<FootballPlayer> FindFootballPlayersByName(string name);
         public List<FootballPlayer> FindFootballPlayersByAchievements(string achievements);
+
+        public List<FootballPlayerDTO> ConvertToDTOList(List<FootballPlayer> footballPlayers);
     }
 }

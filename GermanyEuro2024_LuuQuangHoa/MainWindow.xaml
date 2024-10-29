@@ -6,10 +6,22 @@
         xmlns:local="clr-namespace:GermanyEuro2024_LuuQuangHoa"
         mc:Ignorable="d"
         Title="MainWindow"
-        Width="700" Height="400"
-        Background="#FFF2F184"
+        Width="900" Height="500"
+        Background="#FF74F135"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
-     </Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Background="#88f89b" HorizontalAlignment="Stretch">
+            <Image Source="/germany.png"/>
+            <Button Content="Football Player Management" Width="190" Click="NavigateToPage1"/>
+            
+        </StackPanel>
+
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+
+    </Grid>
 </Window>
