@@ -12,8 +12,8 @@
 
         <TextBox x:Name="TboxEmail" HorizontalAlignment="Center" Margin="0,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Height="33" Text="manager@uefa.com"/>
         <PasswordBox x:Name="TboxPassword" HorizontalAlignment="Center" Margin="0,230,0,0" VerticalAlignment="Top" Width="236" Height="33" Password="@5"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="72,0,0,0" VerticalAlignment="Center" FontSize="20" FontFamily="Tahoma" />
-        <Label Content="Email" HorizontalAlignment="Left" Margin="72,116,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Tahoma"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="66,196,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Tahoma" FontWeight="DemiBold" />
+        <Label Content="Email" HorizontalAlignment="Left" Margin="66,116,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Tahoma" FontWeight="Bold" />
         <Button Content="Login" HorizontalAlignment="Center" Margin="0,291,0,0" VerticalAlignment="Top" Height="49" Width="92" Background="#FF2AFA03" Click="btnLogin_Click" Cursor="Hand"/>
         <Image HorizontalAlignment="Left" Height="70" Margin="270,102,0,0" VerticalAlignment="Top" Width="77" Source="/Resource/Images/ball.png"/>
         <Label x:Name="LabelTitle" Content="Germany Euro 2024" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>

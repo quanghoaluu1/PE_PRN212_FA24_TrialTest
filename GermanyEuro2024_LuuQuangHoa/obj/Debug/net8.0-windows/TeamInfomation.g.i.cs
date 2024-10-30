@@ -60,7 +60,7 @@ namespace GermanyEuro2024_LuuQuangHoa {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GermanyEuro2024_WPF;component/teaminfomation.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GermanyEuro2024_WPF;V1.0.0.0;component/teaminfomation.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\TeamInfomation.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
