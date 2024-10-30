@@ -1,0 +1,28 @@
+﻿<Page x:Class="GermanyEuro2024_LuuQuangHoa.TeamInfomation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GermanyEuro2024_LuuQuangHoa"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TeamInfomation" Loaded="Page_Loaded">
+
+    <Grid>
+        <DataGrid x:Name="DtgTeamInformation" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Football Team Id" Binding="{Binding FootballTeamId}" Width="1*"/>
+                <DataGridTextColumn Header="Football Team Name" Binding="{Binding TeamTitle}" Width="2*" />
+                <DataGridTextColumn Header="Country" Binding="{Binding Country}" Width="2*" />
+                <DataGridTextColumn Header="Manager" Binding="{Binding ManagerName}" Width="2*"/>
+                <DataGridTemplateColumn Header="Detail" Width="1*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="/Resource/Images/detail.png" Width="30" Height="30" Margin="5" Tag="{Binding FootballTeamId}" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

@@ -1,15 +1,4 @@
-﻿using GermanyEuro2024_BusinessObject;
-using GermanyEuro2024_Repository;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace GermanyEuro2024_LuuQuangHoa
 {
@@ -22,11 +11,21 @@ namespace GermanyEuro2024_LuuQuangHoa
         {
             InitializeComponent();
             MainFrame.Navigate(new PlayerInformation());
+            TBlock1.Foreground = System.Windows.Media.Brushes.Red;
         }
+
         private void NavigateToPage1(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new PlayerInformation());
+            TBlock1.Foreground = System.Windows.Media.Brushes.Red;
+            TBlock2.Foreground = System.Windows.Media.Brushes.Black;
         }
 
+        private void NavigateToPage2(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new TeamInfomation());
+            TBlock2.Foreground = System.Windows.Media.Brushes.Red;
+            TBlock1.Foreground = System.Windows.Media.Brushes.Black;
+        }
     }
 }

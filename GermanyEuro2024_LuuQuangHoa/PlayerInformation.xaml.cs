@@ -1,20 +1,9 @@
-﻿using GermanyEuro2024_BusinessObject;
+﻿using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using GermanyEuro2024_BusinessObject;
 using GermanyEuro2024_DAO.DTOs;
 using GermanyEuro2024_Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace GermanyEuro2024_LuuQuangHoa
 {
@@ -25,23 +14,45 @@ namespace GermanyEuro2024_LuuQuangHoa
     {
         private FootballPlayerRepository _footballPlayerRepository;
         private FootballTeamRepository _footballTeamRepository;
+        private string _teamId = null;
         public PlayerInformation()
         {
             InitializeComponent();
             _footballPlayerRepository = new FootballPlayerRepository();
             _footballTeamRepository = new FootballTeamRepository();
+            
         }
 
+        public PlayerInformation(string teamId)
+        {
+            InitializeComponent();
+            _footballPlayerRepository = new FootballPlayerRepository();
+            _footballTeamRepository = new FootballTeamRepository();
+            _teamId = teamId;
+            
+
+        }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            loadDataInit();
+            if (string.IsNullOrEmpty(_teamId))
+            {
+              loadDataInit();
+            }
+            else
+            {
+                List<FootballTeam> footballTeams = _footballTeamRepository.GetAllTeams();
+                List<FootballPlayer> footballPlayers = _footballPlayerRepository.FindFootballPlayersByTeam(_teamId);
+                List<FootballPlayerDTO> footballPlayerDTOs = _footballPlayerRepository.ConvertToDTOList(footballPlayers);
+                dtg_footballPlayerInformation.ItemsSource = footballPlayerDTOs;
+            }
+            
         }
-        private void loadDataInit()
+        public void loadDataInit()
         {
             List<FootballTeam> footballTeams = _footballTeamRepository.GetAllTeams();
             List<FootballPlayer> footballPlayers = _footballPlayerRepository.GetFootballPlayerList();
             List<FootballPlayerDTO> footballPlayerDTOs = _footballPlayerRepository.ConvertToDTOList(footballPlayers);
-            this.dtg_footballPlayerInformation.ItemsSource = footballPlayerDTOs;
+            dtg_footballPlayerInformation.ItemsSource = footballPlayerDTOs;
 
         }
 
@@ -55,25 +66,45 @@ namespace GermanyEuro2024_LuuQuangHoa
 
         }
 
-        private void btn_delete_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_update_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void UIElement_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
            var image = sender as Image;
             if(image != null)
             {
                 string playerId = image.Tag as string;
-                MessageBox.Show(playerId);
                 PlayerDetail playerDetail = new PlayerDetail(playerId);
-                playerDetail.ShowDialog();
+                bool? result = playerDetail.ShowDialog();
+                if (result == true)
+                {
+                    loadDataInit();
+                }
+            }
+        }
+
+        private void BtnAdd_OnClick(object sender, RoutedEventArgs e)
+        {
+            PlayerDetail playerDetail = new PlayerDetail();
+            bool? result = playerDetail.ShowDialog();
+            if (result == true)
+            {
+                loadDataInit();
+            }
+        }
+
+        private void BtnSearch_OnClick(object sender, RoutedEventArgs e)
+        {
+            string searchValue = TbSearch.Text;
+            if (string.IsNullOrEmpty(searchValue))
+            {
+                dtg_footballPlayerInformation.ItemsSource = _footballPlayerRepository.ConvertToDTOList(_footballPlayerRepository.GetFootballPlayerList());
+            }
+            else if (CboxItemName.IsSelected)
+            {
+                dtg_footballPlayerInformation.ItemsSource = _footballPlayerRepository.ConvertToDTOList(_footballPlayerRepository.FindFootballPlayersByName(searchValue));
+            }
+            else if (CboxItemAchievement.IsSelected)
+            {
+                dtg_footballPlayerInformation.ItemsSource = _footballPlayerRepository.ConvertToDTOList(_footballPlayerRepository.FindFootballPlayersByAchievements(searchValue));
             }
         }
     }

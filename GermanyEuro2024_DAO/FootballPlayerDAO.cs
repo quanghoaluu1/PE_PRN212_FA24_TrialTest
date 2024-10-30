@@ -43,6 +43,11 @@ namespace GermanyEuro2024_DAO
 
         public void AddFootballPlayer(FootballPlayer footballPlayer)
         {
+            
+            foreach (var entry in _context.ChangeTracker.Entries<FootballPlayer>())
+            {
+                entry.State = EntityState.Detached;
+            }
             _context.FootballPlayers.Add(footballPlayer);
             _context.SaveChanges();
         }
@@ -74,6 +79,12 @@ namespace GermanyEuro2024_DAO
         public List<FootballPlayer> FindFootballPlayersByAchievements(string achievements)
         {
             List<FootballPlayer> footballPlayers = _context.FootballPlayers.Where(m => m.Achievements.Contains(achievements)).ToList();
+            return footballPlayers;
+        }
+
+        public List<FootballPlayer> FindFootballPlayersByTeam(string teamId)
+        {
+            List<FootballPlayer> footballPlayers = _context.FootballPlayers.Where(m => m.FootballTeamId.Contains(teamId)).ToList();
             return footballPlayers;
         }
 

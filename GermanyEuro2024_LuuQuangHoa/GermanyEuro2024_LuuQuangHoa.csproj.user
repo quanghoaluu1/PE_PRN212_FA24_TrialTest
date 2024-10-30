@@ -19,6 +19,9 @@
     <Compile Update="PlayerInformation.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="TeamInfomation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="LoginPage.xaml">
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PlayerInformation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TeamInfomation.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

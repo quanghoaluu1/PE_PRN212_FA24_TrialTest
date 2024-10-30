@@ -3,11 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GermanyEuro2024_LuuQuangHoa"
         mc:Ignorable="d"
         Title="PlayerDetail" Height="640" Width="600" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush ImageSource="/footballDetail.jpg"/>
+        <ImageBrush ImageSource="/Resource/Images/footballDetail.jpg"/>
     </Window.Background>
     <Grid>
         <Label x:Name="labelTitle" Foreground="GhostWhite" Content="Player Information" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="40" FontWeight="Bold"/>
@@ -18,8 +17,9 @@
         <DatePicker x:Name="dateBirthday" HorizontalAlignment="Left" Margin="60,358,0,0" VerticalAlignment="Top" Width="192"/>
         <TextBox x:Name="tboxOriginCountry" HorizontalAlignment="Left" Margin="60,438,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="27"/>
         <ComboBox x:Name="cboxTeamTitle" HorizontalAlignment="Left" Margin="363,438,0,0" VerticalAlignment="Top" Width="192" Height="27"/>
-        <Button Content="Edit" HorizontalAlignment="Left" Margin="94,510,0,0" VerticalAlignment="Top" Height="55" Width="124"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="397,510,0,0" VerticalAlignment="Top" Height="55" Width="124"/>
+        <Button Name="BtnUpdate" Content="Update" Background="DodgerBlue" Margin="94,510,382,0" VerticalAlignment="Top" Height="55" Width="124" Visibility="Hidden" Click="BtnUpdate_OnClick"/>
+        <Button Name="BtnDelete" Content="Delete" Background="Red" Margin="397,510,79,0" VerticalAlignment="Top" Height="55" Width="124" Visibility="Hidden" Click="BtnDelete_OnClick"/>
+        <Button Name="BtnAdd" Content="Add" Background="Lime" VerticalAlignment="Top" Height="55" Margin="238,510,222,0" Visibility="Hidden" Click="BtnAdd_OnClick"/>
         <Label Foreground="GhostWhite" FontWeight="Bold" Content="Player Id" HorizontalAlignment="Left" Margin="60,115,0,0" VerticalAlignment="Top"/>
         <Label Foreground="GhostWhite" FontWeight="Bold" Content="Player Name" HorizontalAlignment="Left" Margin="363,115,0,0" VerticalAlignment="Top"/>
         <Label Foreground="GhostWhite" FontWeight="Bold" Content="Achievements" HorizontalAlignment="Left" Margin="60,199,0,0" VerticalAlignment="Top"/>

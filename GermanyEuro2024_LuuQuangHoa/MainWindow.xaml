@@ -16,10 +16,13 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Background="#88f89b" HorizontalAlignment="Stretch">
-            <Image Source="/germany.png"/>
-            <Button Content="Football Player Management" Width="190" Click="NavigateToPage1"/>
-            
+            <Image Source="/Resource/Images/germany.png"/>
+            <TextBlock x:Name="TBlock1" Text="Football Player Management" TextWrapping="Wrap" Width="170" MouseLeftButtonUp="NavigateToPage1" Height="61" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+            <TextBlock x:Name="TBlock2" Text="Football Team Management" TextWrapping="Wrap" Width="170" MouseLeftButtonUp="NavigateToPage2" Height="61" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+
         </StackPanel>
+        
+        
 
         <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
 

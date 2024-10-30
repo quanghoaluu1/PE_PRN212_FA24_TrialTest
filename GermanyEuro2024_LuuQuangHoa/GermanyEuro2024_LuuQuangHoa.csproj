@@ -19,17 +19,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="ball.png" />
-    <Resource Include="Football_field.png" />
-    <Resource Include="germany.png" />
+    <Resource Include="Resource\Images\ball.png" />
+    <Resource Include="Resource\Images\Football_field.png" />
+    <Resource Include="Resource\Images\germany.png" />
     <None Remove="detail.png" />
-    <Resource Include="detail.png">
+    <Resource Include="Resource\Images\detail.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <None Remove="footballDetail.jpg" />
-    <Resource Include="footballDetail.jpg">
+    <Resource Include="Resource\Images\footballDetail.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <None Remove="Resource\Images\add.png" />
+    <Resource Include="Resource\Images\add.png" />
   </ItemGroup>
 
   <ItemGroup>

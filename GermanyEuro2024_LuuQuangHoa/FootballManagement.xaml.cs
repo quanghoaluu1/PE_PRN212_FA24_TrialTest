@@ -1,9 +1,9 @@
-﻿using GermanyEuro2024_BusinessObject;
-using GermanyEuro2024_Repository;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using GermanyEuro2024_BusinessObject;
+using GermanyEuro2024_Repository;
 
 namespace GermanyEuro2024_LuuQuangHoa
 {
@@ -37,9 +37,6 @@ namespace GermanyEuro2024_LuuQuangHoa
                     break;
                 case 3:
                     break;
-                default:
-                    break;
-
             }
 
         }
@@ -65,11 +62,11 @@ namespace GermanyEuro2024_LuuQuangHoa
         {
             List<FootballTeam> footballTeams = _footballTeamRepository.GetAllTeams();
             List<FootballPlayer> footballPlayers = _footballPlayerRepository.GetFootballPlayerList();
-            this.dtg_footballPlayerInformation.ItemsSource = footballPlayers;
+            dtg_footballPlayerInformation.ItemsSource = footballPlayers;
             
-            this.cbbox_teamTitle.ItemsSource = _footballTeamRepository.GetAllTeams();
-            this.cbbox_teamTitle.DisplayMemberPath = "TeamTitle";
-            this.cbbox_teamTitle.SelectedValuePath = "FootballTeamId";
+            cbbox_teamTitle.ItemsSource = _footballTeamRepository.GetAllTeams();
+            cbbox_teamTitle.DisplayMemberPath = "TeamTitle";
+            cbbox_teamTitle.SelectedValuePath = "FootballTeamId";
             tbox_playerId.Text = "";
             tbox_playerName.Text = "";
             tbox_achivements.Text = "";
@@ -95,17 +92,17 @@ namespace GermanyEuro2024_LuuQuangHoa
                 
                 if(footballPlayer != null)
                 {
-                    this.tbox_playerId.IsEnabled = false;
-                    this.tbox_playerId.IsReadOnly = true;
+                    tbox_playerId.IsEnabled = false;
+                    tbox_playerId.IsReadOnly = true;
                     ForceCursor = true;
                     tbox_playerId.Cursor = Cursors.No;
-                    this.tbox_playerId.Text = footballPlayer.PlayerId;
-                    this.tbox_playerName.Text = footballPlayer.PlayerName;
-                    this.tbox_achivements.Text = footballPlayer.Achievements;
-                    this.tbox_award.Text = footballPlayer.Award;
-                    this.cbbox_teamTitle.SelectedValue = footballPlayer.FootballTeamId;
-                    this.tbox_country.Text = footballPlayer.OriginCountry;
-                    this.date_birthday.Text = footballPlayer.Birthday.ToString();
+                    tbox_playerId.Text = footballPlayer.PlayerId;
+                    tbox_playerName.Text = footballPlayer.PlayerName;
+                    tbox_achivements.Text = footballPlayer.Achievements;
+                    tbox_award.Text = footballPlayer.Award;
+                    cbbox_teamTitle.SelectedValue = footballPlayer.FootballTeamId;
+                    tbox_country.Text = footballPlayer.OriginCountry;
+                    date_birthday.Text = footballPlayer.Birthday.ToString();
                 }
             }
         }
@@ -212,7 +209,7 @@ namespace GermanyEuro2024_LuuQuangHoa
                 }
                 else
                 {
-                    this.dtg_footballPlayerInformation.ItemsSource = footballPlayers;
+                    dtg_footballPlayerInformation.ItemsSource = footballPlayers;
                 }
             }
             else if (rbtn_byAchievement.IsChecked == true)
@@ -224,7 +221,7 @@ namespace GermanyEuro2024_LuuQuangHoa
                 }
                 else
                 {
-                    this.dtg_footballPlayerInformation.ItemsSource = footballPlayers;
+                    dtg_footballPlayerInformation.ItemsSource = footballPlayers;
                 }
 
             }
@@ -233,8 +230,8 @@ namespace GermanyEuro2024_LuuQuangHoa
         private void btn_clear_Click(object sender, RoutedEventArgs e)
         {
             loadDataInit();
-            this.tbox_playerId.IsEnabled = true;
-            this.tbox_playerId.IsReadOnly = false;
+            tbox_playerId.IsEnabled = true;
+            tbox_playerId.IsReadOnly = false;
 
         }
     }
