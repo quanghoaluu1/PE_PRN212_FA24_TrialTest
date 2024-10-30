@@ -3,13 +3,14 @@ using GermanyEuro2024_Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+
 namespace GermanyEuro2024_RazorPage.Pages;
 
 public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
-    private readonly IUEFAAccountRepository _uefaAccountRepository;
-    public IndexModel(ILogger<IndexModel> logger,IUEFAAccountRepository uefaAccountRepository)
+    private readonly IUefaAccountRepository _uefaAccountRepository;
+    public IndexModel(ILogger<IndexModel> logger,IUefaAccountRepository uefaAccountRepository)
     {
         _logger = logger;
       
@@ -30,6 +31,7 @@ public class IndexModel : PageModel
 
         if (uefaAccount != null && uefaAccount.AccountPassword == Password)
         {
+            HttpContext.Session.SetString("UserRole", uefaAccount.Role.ToString());
             return RedirectToPage("/FootballManagement");
         }
         else

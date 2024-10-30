@@ -1,10 +1,5 @@
 ﻿using GermanyEuro2024_BusinessObject;
 using GermanyEuro2024_DAO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GermanyEuro2024_Repository
 {
@@ -17,7 +12,7 @@ namespace GermanyEuro2024_Repository
 
         public FootballTeam GetFootballTeamByID(string id)
         {
-            return FootballTeamDAO.Instance.GetFootballTeamByID(id);
+            return FootballTeamDAO.Instance.GetFootballTeamById(id);
         }
     }
 }

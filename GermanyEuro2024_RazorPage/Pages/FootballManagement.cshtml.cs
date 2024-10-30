@@ -27,8 +27,11 @@ public class FootballManagement : PageModel
     
     public List<SelectListItem> Teams { get; set; }
     
+    public string UserRole{ get; private set; }
+    
     public void OnGet()
     {
+        UserRole = HttpContext.Session.GetString("UserRole");
         var players = _footballPlayerRepository.GetFootballPlayerList();
         FootballPlayers = players;
         
@@ -40,6 +43,11 @@ public class FootballManagement : PageModel
         }).ToList();
     }
 
+    public IActionResult OnPostLogout()
+    {
+        HttpContext.Session.Remove("UserRole");
+        return RedirectToPage("/Index");
+    }
     public IActionResult OnPostSelect(string footballPlayerId)
     {
         
@@ -93,20 +101,20 @@ public class FootballManagement : PageModel
         try
         {
             FootballPlayer newFootballPlayer = new FootballPlayer();
-            newFootballPlayer.PlayerId = SelectedFootballPlayer.PlayerId;
+            newFootballPlayer.PlayerId = GetNewId();
             newFootballPlayer.PlayerName = SelectedFootballPlayer.PlayerName;
             if (!isValidName(SelectedFootballPlayer.PlayerName))
             {
                 TempData["Error"] = "Please enter a valid name";
                 LoadDataInit();
-                return Page();
+                return OnPostClear();
             }
             newFootballPlayer.Birthday = SelectedFootballPlayer.Birthday;
             if (SelectedFootballPlayer.Birthday > new DateTime(2004, 1, 1))
             {
                 TempData["Error"] = "We don't accept players younger than 2004";
                 LoadDataInit();
-                return Page();
+                return OnPostClear();
             }
             newFootballPlayer.Achievements = SelectedFootballPlayer.Achievements;
             newFootballPlayer.Award = SelectedFootballPlayer.Award;
@@ -114,20 +122,29 @@ public class FootballManagement : PageModel
             newFootballPlayer.FootballTeamId = SelectedFootballPlayer.FootballTeamId;
             _footballPlayerRepository.AddFootballPlayer(newFootballPlayer);
             SelectedFootballPlayer = new FootballPlayer();
+            LoadDataInit();
             FootballPlayers = _footballPlayerRepository.GetFootballPlayerList();
             TempData["SuccessMessage"] = "Add player successfully.";
+            
         }
         catch (Exception ex)
         {
             ModelState.AddModelError("", "Error adding player: " + ex.Message);
             FootballPlayers = _footballPlayerRepository.GetFootballPlayerList();
         }
-        return Page();
+        return OnPostClear();
+    }
+    private string GetNewId()
+    {
+        List<FootballPlayer> footballPlayers = _footballPlayerRepository.GetFootballPlayerList();
+        FootballPlayer lastFootballPlayer = footballPlayers.OrderBy(p => p.PlayerId).LastOrDefault();
+        int number =  int.Parse(lastFootballPlayer.PlayerId.Substring(2)) + 1;
+        return $"PL{number:D5}";
     }
 
     private bool isValidName(string name)
     {
-        bool result = !(name.Length < 3 || name.Length > 100);
+        var result = !(name.Length < 3 || name.Length > 100);
         if (!Regex.IsMatch(name, @"^[A-Za-z0-9 ]+$"))
         {
             result = false;
@@ -146,10 +163,9 @@ public class FootballManagement : PageModel
     public IActionResult OnPostDelete()
     {
             _footballPlayerRepository.RemoveFootballPlayer(SelectedFootballPlayer.PlayerId);
-            SelectedFootballPlayer = new FootballPlayer();
-            FootballPlayers = _footballPlayerRepository.GetFootballPlayerList();
             TempData["SuccessMessage"] = "Delete player successfully.";
-            return Page();
+            return OnPostClear();
+            
     }
 
     public IActionResult OnPostUpdate()

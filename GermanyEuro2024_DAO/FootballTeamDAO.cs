@@ -34,7 +34,7 @@ namespace GermanyEuro2024_DAO
             return _context.FootballTeams.ToList();
         }
 
-        public FootballTeam GetFootballTeamByID(string id)
+        public FootballTeam GetFootballTeamById(string id)
         {
             return _context.FootballTeams.SingleOrDefault(m => m.FootballTeamId.Equals(id));
         }

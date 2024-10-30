@@ -14,7 +14,7 @@ namespace GermanyEuro2024_LuuQuangHoa
     {
         private FootballPlayerRepository _footballPlayerRepository;
         private FootballTeamRepository _footballTeamRepository;
-        private string _teamId = null;
+        private string _teamId = "";
         private int? _role = 0;
         public PlayerInformation()
         {
@@ -69,7 +69,7 @@ namespace GermanyEuro2024_LuuQuangHoa
                 List<FootballTeam> footballTeams = _footballTeamRepository.GetAllTeams();
                 List<FootballPlayer> footballPlayers = _footballPlayerRepository.FindFootballPlayersByTeam(_teamId);
                 List<FootballPlayerDTO> footballPlayerDTOs = _footballPlayerRepository.ConvertToDTOList(footballPlayers);
-                dtg_footballPlayerInformation.ItemsSource = footballPlayerDTOs;
+                DtgFootballPlayerInformation.ItemsSource = footballPlayerDTOs;
             }
             
         }
@@ -78,7 +78,7 @@ namespace GermanyEuro2024_LuuQuangHoa
             List<FootballTeam> footballTeams = _footballTeamRepository.GetAllTeams();
             List<FootballPlayer> footballPlayers = _footballPlayerRepository.GetFootballPlayerList();
             List<FootballPlayerDTO> footballPlayerDTOs = _footballPlayerRepository.ConvertToDTOList(footballPlayers);
-            dtg_footballPlayerInformation.ItemsSource = footballPlayerDTOs;
+            DtgFootballPlayerInformation.ItemsSource = footballPlayerDTOs;
 
         }
 
@@ -112,15 +112,15 @@ namespace GermanyEuro2024_LuuQuangHoa
             string searchValue = TbSearch.Text;
             if (string.IsNullOrEmpty(searchValue))
             {
-                dtg_footballPlayerInformation.ItemsSource = _footballPlayerRepository.ConvertToDTOList(_footballPlayerRepository.GetFootballPlayerList());
+                DtgFootballPlayerInformation.ItemsSource = _footballPlayerRepository.ConvertToDTOList(_footballPlayerRepository.GetFootballPlayerList());
             }
             else if (CboxItemName.IsSelected)
             {
-                dtg_footballPlayerInformation.ItemsSource = _footballPlayerRepository.ConvertToDTOList(_footballPlayerRepository.FindFootballPlayersByName(searchValue));
+                DtgFootballPlayerInformation.ItemsSource = _footballPlayerRepository.ConvertToDTOList(_footballPlayerRepository.FindFootballPlayersByName(searchValue));
             }
             else if (CboxItemAchievement.IsSelected)
             {
-                dtg_footballPlayerInformation.ItemsSource = _footballPlayerRepository.ConvertToDTOList(_footballPlayerRepository.FindFootballPlayersByAchievements(searchValue));
+                DtgFootballPlayerInformation.ItemsSource = _footballPlayerRepository.ConvertToDTOList(_footballPlayerRepository.FindFootballPlayersByAchievements(searchValue));
             }
         }
     }

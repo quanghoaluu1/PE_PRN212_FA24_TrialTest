@@ -29,7 +29,7 @@ namespace GermanyEuro2024_DAO
             }
         }
 
-        public Uefaaccount GetUEFAAccountByEmail(string email)
+        public Uefaaccount GetUefaAccountByEmail(string email)
         {
             return _context.Uefaaccounts.SingleOrDefault(m => m.AccountEmail.Equals(email));
         }

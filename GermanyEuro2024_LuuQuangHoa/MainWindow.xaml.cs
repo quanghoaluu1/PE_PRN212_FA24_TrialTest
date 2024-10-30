@@ -9,7 +9,7 @@ namespace GermanyEuro2024_LuuQuangHoa
     /// </summary>
     public partial class MainWindow : Window
     {
-        private int? _role;
+        private readonly int? _role;
         public MainWindow(int? role)
         {
             InitializeComponent();

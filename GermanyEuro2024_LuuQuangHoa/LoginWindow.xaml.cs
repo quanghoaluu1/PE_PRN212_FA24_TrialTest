@@ -10,19 +10,19 @@ namespace GermanyEuro2024_WPF
     /// </summary>
     public partial class LoginWindow : Window
     {
-        private UEFAAccountRepository _uefaAccountRepository;
+        private UefaAccountRepository _uefaAccountRepository;
 
         public LoginWindow()
         {
             InitializeComponent();
-            _uefaAccountRepository = new UEFAAccountRepository();
+            _uefaAccountRepository = new UefaAccountRepository();
         }
 
   
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Uefaaccount uefaaccount = _uefaAccountRepository.GetUEFAAccountByEmail(tboxEmail.Text);
-            if (uefaaccount != null && uefaaccount.AccountPassword.Equals(tboxPassword.Password))
+            Uefaaccount uefaaccount = _uefaAccountRepository.GetUEFAAccountByEmail(TboxEmail.Text);
+            if (uefaaccount.AccountPassword.Equals(TboxPassword.Password))
             {
                 int? role = uefaaccount.Role;
                 if (role == 1 || role == 4)
