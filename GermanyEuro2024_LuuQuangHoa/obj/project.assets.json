@@ -3242,9 +3242,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest\\GermanyEuro2024_LuuQuangHoa\\GermanyEuro2024_LuuQuangHoa.csproj",
-      "projectName": "GermanyEuro2024_LuuQuangHoa",
-      "projectPath": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest\\GermanyEuro2024_LuuQuangHoa\\GermanyEuro2024_LuuQuangHoa.csproj",
+      "projectUniqueName": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest\\GermanyEuro2024_LuuQuangHoa\\GermanyEuro2024_WPF.csproj",
+      "projectName": "GermanyEuro2024_WPF",
+      "projectPath": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest\\GermanyEuro2024_LuuQuangHoa\\GermanyEuro2024_WPF.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest\\GermanyEuro2024_LuuQuangHoa\\obj\\",
       "projectStyle": "PackageReference",

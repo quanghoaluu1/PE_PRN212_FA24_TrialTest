@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GCT+Vevz/M8=",
+  "dgSpecHash": "9+PUM/31cHY=",
   "success": true,
-  "projectFilePath": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest\\GermanyEuro2024_LuuQuangHoa\\GermanyEuro2024_LuuQuangHoa.csproj",
+  "projectFilePath": "D:\\C#\\.NET\\PE_PRN212_FA24_TrialTest\\GermanyEuro2024_LuuQuangHoa\\GermanyEuro2024_WPF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

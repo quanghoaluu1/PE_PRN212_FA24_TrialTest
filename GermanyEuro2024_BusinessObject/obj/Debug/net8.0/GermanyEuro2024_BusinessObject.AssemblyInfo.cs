@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GermanyEuro2024_BusinessObject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcc60b80cbe7d913e1f459952bb45405a1f11d53")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c05719dc4e2be27d2974f9a84274034158f1874")]
 [assembly: System.Reflection.AssemblyProductAttribute("GermanyEuro2024_BusinessObject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GermanyEuro2024_BusinessObject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

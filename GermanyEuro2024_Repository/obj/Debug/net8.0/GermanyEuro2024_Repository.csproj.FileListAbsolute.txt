@@ -70,3 +70,4 @@ D:\C#\.NET\PE_PRN212_FA24_TrialTest\GermanyEuro2024_Repository\obj\Debug\net8.0\
 D:\C#\.NET\PE_PRN212_FA24_TrialTest\GermanyEuro2024_Repository\obj\Debug\net8.0\refint\GermanyEuro2024_Repository.dll
 D:\C#\.NET\PE_PRN212_FA24_TrialTest\GermanyEuro2024_Repository\obj\Debug\net8.0\GermanyEuro2024_Repository.pdb
 D:\C#\.NET\PE_PRN212_FA24_TrialTest\GermanyEuro2024_Repository\obj\Debug\net8.0\ref\GermanyEuro2024_Repository.dll
+D:\C#\.NET\PE_PRN212_FA24_TrialTest\GermanyEuro2024_Repository\bin\Debug\net8.0\appsettings.json

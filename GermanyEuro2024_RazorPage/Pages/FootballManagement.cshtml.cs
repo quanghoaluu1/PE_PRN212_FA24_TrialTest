@@ -48,10 +48,11 @@ public class FootballManagement : PageModel
         HttpContext.Session.Remove("UserRole");
         return RedirectToPage("/Index");
     }
-    public IActionResult OnPostSelect(string footballPlayerId)
+    public void OnPostSelect(string footballPlayerId)
     {
-        
-            SelectedFootballPlayer = _footballPlayerRepository.GetFootballPlayerById(footballPlayerId);
+        UserRole = HttpContext.Session.GetString("UserRole");
+
+        SelectedFootballPlayer = _footballPlayerRepository.GetFootballPlayerById(footballPlayerId);
             var footballTeams = _footballTeamRepository.GetAllTeams();
             Teams = footballTeams.Select(t => new SelectListItem
             {
@@ -60,7 +61,6 @@ public class FootballManagement : PageModel
             }).ToList();
             FootballPlayers = _footballPlayerRepository.GetFootballPlayerList();
 
-        return Page();
     }
 
     public string GetFootballTeam(string footballTeamId)

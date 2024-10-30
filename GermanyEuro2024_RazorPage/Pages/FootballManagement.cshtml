@@ -11,7 +11,7 @@
 }
 @if (TempData["Error"] != null)
 {
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-warning" role="alert">
         @TempData["Error"]
     </div>
 }
@@ -53,7 +53,7 @@ else
 
             <div class="col-md-6">
                 <label for="playerId" class="form-label">Player ID</label>
-                <input type="text" id="playerId" asp-for="SelectedFootballPlayer.PlayerId" disabled="" class="form-control"/>
+                <input type="text" id="playerId" asp-for="SelectedFootballPlayer.PlayerId" readonly="" class="form-control"/>
             </div>
             <div class="col-md-6">
                 <label for="playerName" class="form-label">Player Name</label>
