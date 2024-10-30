@@ -15,14 +15,13 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" Background="#88f89b" HorizontalAlignment="Stretch">
+        <StackPanel Orientation="Horizontal" Background="#88f89b" Margin="0,0,143,0">
             <Image Source="/Resource/Images/germany.png"/>
-            <TextBlock x:Name="TBlock1" Text="Football Player Management" TextWrapping="Wrap" Width="170" MouseLeftButtonUp="NavigateToPage1" Height="61" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
-            <TextBlock x:Name="TBlock2" Text="Football Team Management" TextWrapping="Wrap" Width="170" MouseLeftButtonUp="NavigateToPage2" Height="61" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
-
+            <TextBlock x:Name="TBlock1" Text="Football Player Management" TextWrapping="Wrap" Width="170" MouseLeftButtonUp="NavigateToPage1" Height="61" FontSize="20" FontWeight="Bold" TextAlignment="Center" Cursor="Hand"/>
+            <TextBlock x:Name="TBlock2" Text="Football Team Management" TextWrapping="Wrap" Width="170" MouseLeftButtonUp="NavigateToPage2" Height="61" FontSize="20" FontWeight="Bold" TextAlignment="Center" Cursor="Hand"/>
         </StackPanel>
-        
-        
+        <Image Grid.Row="0" Source="/Resource/Images/logout.png" Margin="758,0,6,0" MouseLeftButtonUp="UIElement_OnMouseLeftButtonUp" Cursor="Hand"/>
+
 
         <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
 

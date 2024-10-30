@@ -25,9 +25,17 @@ namespace GermanyEuro2024_WPF
             if (uefaaccount != null && uefaaccount.AccountPassword.Equals(tboxPassword.Password))
             {
                 int? role = uefaaccount.Role;
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                Close();
+                if (role == 1 || role == 4)
+                {
+                    MessageBox.Show("You have no permission to access this function!");
+                }
+                else
+                {
+                    MainWindow mainWindow = new MainWindow(role);
+                    mainWindow.Show();
+                    Close();  
+                }
+                
             }
             else
             {

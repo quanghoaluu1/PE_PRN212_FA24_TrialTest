@@ -15,7 +15,7 @@
         <PasswordBox x:Name="tboxPassword" HorizontalAlignment="Center" Margin="0,230,0,0" VerticalAlignment="Top" Width="236" Height="33" Password="@5"/>
         <Label x:Name="labelPassword" Content="Password" HorizontalAlignment="Left" Margin="72,0,0,0" VerticalAlignment="Center" FontSize="20" FontFamily="Tahoma" />
         <Label x:Name="labelEmail" Content="Email" HorizontalAlignment="Left" Margin="72,116,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Tahoma"/>
-        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Center" Margin="0,291,0,0" VerticalAlignment="Top" Height="49" Width="92" Background="#FF2AFA03" Click="btnLogin_Click"/>
+        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Center" Margin="0,291,0,0" VerticalAlignment="Top" Height="49" Width="92" Background="#FF2AFA03" Click="btnLogin_Click" Cursor="Hand"/>
         <Image HorizontalAlignment="Left" Height="70" Margin="270,102,0,0" VerticalAlignment="Top" Width="77" Source="/ball.png"/>
         <Label x:Name="labelTitle" Content="Germany Euro 2024" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
         <Image HorizontalAlignment="Left" Height="133" Margin="0,291,0,0" VerticalAlignment="Top" Width="138" Source="/Resource/Images/germany.png"/>

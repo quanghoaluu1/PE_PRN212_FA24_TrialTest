@@ -1,7 +1,10 @@
 ﻿using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Forms;
 using GermanyEuro2024_BusinessObject;
 using GermanyEuro2024_Repository;
+using Cursor = System.Windows.Input.Cursor;
+using MessageBox = System.Windows.MessageBox;
 
 namespace GermanyEuro2024_LuuQuangHoa
 {
@@ -19,13 +22,35 @@ namespace GermanyEuro2024_LuuQuangHoa
             _footballTeamRepository = new FootballTeamRepository();
             InitializeComponent();
         }
-        public PlayerDetail(string playerId)
+        public PlayerDetail(string playerId, int? role)
         {
             InitializeComponent();
             _playerId = playerId;
             _footballPlayerRepository = new FootballPlayerRepository();
             _footballTeamRepository = new FootballTeamRepository();
-        }   
+            switch (role)
+            {
+                case 3 :
+                    BtnDelete.Visibility = Visibility.Visible;
+                    BtnUpdate.Visibility = Visibility.Visible;
+                    break;
+                case 2:
+                    Disable();
+                    break;
+                
+            }
+        }
+
+        private void Disable()
+        {
+            tboxPlayerId.IsEnabled = false;
+            tboxPlayerName.IsEnabled = false;
+            tboxAchievement.IsEnabled = false;
+            dateBirthday.IsEnabled = false;
+            tbAward.IsEnabled = false;
+            tboxOriginCountry.IsEnabled = false;
+            cboxTeamTitle.IsEnabled = false;
+        }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -56,14 +81,13 @@ namespace GermanyEuro2024_LuuQuangHoa
             tbAward.Text = footballPlayer.Award;
             tboxOriginCountry.Text = footballPlayer.OriginCountry;
             cboxTeamTitle.SelectedValue = footballPlayer.FootballTeamId;
-            BtnDelete.Visibility = Visibility.Visible;
-            BtnUpdate.Visibility = Visibility.Visible;
             tboxPlayerId.IsEnabled = false;
         }
         
         private void LoadBlankData()
         {
-            tboxPlayerId.Text = "";
+            tboxPlayerId.Text = GetNewId();
+            tboxPlayerId.IsEnabled = false;
             tboxPlayerName.Text = "";
             tboxAchievement.Text = "";
             dateBirthday.Text = "";
@@ -76,7 +100,7 @@ namespace GermanyEuro2024_LuuQuangHoa
         private void BtnAdd_OnClick(object sender, RoutedEventArgs e)
         {
             FootballPlayer footballPlayer = new FootballPlayer();
-            footballPlayer.PlayerId = tboxPlayerId.Text;
+            footballPlayer.PlayerId = GetNewId();
             if (ExistedPlayerId(footballPlayer.PlayerId))
             {
                 MessageBox.Show("Player Id existed");
@@ -110,6 +134,14 @@ namespace GermanyEuro2024_LuuQuangHoa
                 
             }
         }
+
+        private string GetNewId()
+        {
+            List<FootballPlayer> footballPlayers = _footballPlayerRepository.GetFootballPlayerList();
+            FootballPlayer lastFootballPlayer = footballPlayers.OrderBy(p => p.PlayerId).LastOrDefault();
+            int number =  int.Parse(lastFootballPlayer.PlayerId.Substring(2)) + 1;
+            return $"PL{number:D5}";
+        }
         private bool ExistedPlayerId(string playerId)
         {
             return _footballPlayerRepository.GetFootballPlayerList().Exists(player => player.PlayerId == playerId);
@@ -136,6 +168,7 @@ namespace GermanyEuro2024_LuuQuangHoa
         private void BtnUpdate_OnClick(object sender, RoutedEventArgs e)
         {
             FootballPlayer updatePlayer = _footballPlayerRepository.GetFootballPlayerById(_playerId);
+
             updatePlayer.PlayerName = tboxPlayerName.Text;
             updatePlayer.Achievements = tboxAchievement.Text;
             updatePlayer.Birthday = DateTime.Parse(dateBirthday.Text);

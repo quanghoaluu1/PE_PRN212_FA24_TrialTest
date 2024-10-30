@@ -21,20 +21,20 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <TextBox Name="TbSearch" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="170" Height="26" TextChanged="TextBox_TextChanged" Margin="105,0,0,0"/>
+            <TextBox Name="TbSearch" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="170" Height="26" Margin="105,0,0,0"/>
             <ComboBox Name="CbSearch" HorizontalAlignment="Left" VerticalAlignment="Center" Width="90" Height="26" Margin="10,0,0,0">
                 <ComboBoxItem Name="CboxItemName" IsSelected="True">By Name</ComboBoxItem>
                 <ComboBoxItem Name="CboxItemAchievement">By Achievement</ComboBoxItem>
             </ComboBox>
             <Button Name="BtnSearch" Content="Search" HorizontalAlignment="Left" Margin="280,0,0,0" VerticalAlignment="Center" Height="28" Width="70" Click="BtnSearch_OnClick"/>
-            <StackPanel MouseLeftButtonUp="BtnAdd_OnClick" Grid.Column="1" Orientation="Horizontal" Margin="104,0,57,0">
-                <Image Source="/Resource/Images/add.png" Height="34" Width="52"/>
-                <TextBlock Text="Add Player" Height="36" FontSize="24" FontWeight="Bold" Width="216"  />
+            <StackPanel Name="SPanelAdd" MouseLeftButtonUp="BtnAdd_OnClick" Grid.Column="1" Orientation="Horizontal" Margin="104,0,57,0" Cursor="Hand">
+                <Image Name="ImageAdd" Source="/Resource/Images/add.png" Height="34" Width="52"/>
+                <TextBlock Name="TextBlockAdd" Text="Add Player" Height="36" FontSize="24" FontWeight="Bold" Width="216"  />
             </StackPanel>
 
         </Grid>
 
-        <DataGrid x:Name="dtg_footballPlayerInformation" Height="Auto" MaxHeight="400" Grid.Row="1" Margin="10" AutoGenerateColumns="False" SelectionChanged="dtg_footballPlayerInformation_SelectionChanged" CanUserAddRows="False" ColumnWidth="*">
+        <DataGrid x:Name="dtg_footballPlayerInformation" Height="Auto" MaxHeight="400" Grid.Row="1" Margin="10" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Player ID" Binding="{Binding PlayerID}" Width="1*"/>
                 <DataGridTextColumn Header="Player Name" Binding="{Binding PlayerName}" Width="2*"/>
@@ -51,7 +51,7 @@
                 <DataGridTemplateColumn Header="Detail" Width="1*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Image Source="/Resource/Images/detail.png" Width="30" Height="30" Margin="5" Tag="{Binding PlayerID}" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown"/>
+                            <Image Source="/Resource/Images/detail.png" Width="30" Height="30" Margin="5" Tag="{Binding PlayerID}" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown" Cursor="Hand"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

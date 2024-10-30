@@ -15,6 +15,7 @@ namespace GermanyEuro2024_LuuQuangHoa
         private FootballPlayerRepository _footballPlayerRepository;
         private FootballTeamRepository _footballTeamRepository;
         private string _teamId = null;
+        private int? _role = 0;
         public PlayerInformation()
         {
             InitializeComponent();
@@ -23,14 +24,39 @@ namespace GermanyEuro2024_LuuQuangHoa
             
         }
 
-        public PlayerInformation(string teamId)
+        public PlayerInformation(string teamId, int? role)
         {
             InitializeComponent();
             _footballPlayerRepository = new FootballPlayerRepository();
             _footballTeamRepository = new FootballTeamRepository();
             _teamId = teamId;
-            
+            _role = role;
+            switch (role)
+            {
+                case 2:
+                    ImageAdd.Visibility= Visibility.Hidden;
+                    TextBlockAdd.Visibility = Visibility.Hidden;
+                    break;
+                case 3:
+                    break;
+            }
+        }
 
+        public PlayerInformation(int? role)
+        {
+            InitializeComponent();
+            _footballPlayerRepository = new FootballPlayerRepository();
+            _footballTeamRepository = new FootballTeamRepository();
+            _role = role;
+            switch (role)
+            {
+                case 2:
+                    ImageAdd.Visibility= Visibility.Hidden;
+                    TextBlockAdd.Visibility = Visibility.Hidden;
+                    break;
+                case 3:
+                    break;
+            }
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -56,23 +82,13 @@ namespace GermanyEuro2024_LuuQuangHoa
 
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void dtg_footballPlayerInformation_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void UIElement_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
            var image = sender as Image;
             if(image != null)
             {
                 string playerId = image.Tag as string;
-                PlayerDetail playerDetail = new PlayerDetail(playerId);
+                PlayerDetail playerDetail = new PlayerDetail(playerId, _role);
                 bool? result = playerDetail.ShowDialog();
                 if (result == true)
                 {

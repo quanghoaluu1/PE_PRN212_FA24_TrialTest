@@ -17,9 +17,9 @@
         <DatePicker x:Name="dateBirthday" HorizontalAlignment="Left" Margin="60,358,0,0" VerticalAlignment="Top" Width="192"/>
         <TextBox x:Name="tboxOriginCountry" HorizontalAlignment="Left" Margin="60,438,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="27"/>
         <ComboBox x:Name="cboxTeamTitle" HorizontalAlignment="Left" Margin="363,438,0,0" VerticalAlignment="Top" Width="192" Height="27"/>
-        <Button Name="BtnUpdate" Content="Update" Background="DodgerBlue" Margin="94,510,382,0" VerticalAlignment="Top" Height="55" Width="124" Visibility="Hidden" Click="BtnUpdate_OnClick"/>
-        <Button Name="BtnDelete" Content="Delete" Background="Red" Margin="397,510,79,0" VerticalAlignment="Top" Height="55" Width="124" Visibility="Hidden" Click="BtnDelete_OnClick"/>
-        <Button Name="BtnAdd" Content="Add" Background="Lime" VerticalAlignment="Top" Height="55" Margin="238,510,222,0" Visibility="Hidden" Click="BtnAdd_OnClick"/>
+        <Button Name="BtnUpdate" Content="Update" Background="DodgerBlue" Margin="94,510,382,0" VerticalAlignment="Top" Height="55" Width="124" Visibility="Hidden" Click="BtnUpdate_OnClick" Cursor="Hand"/>
+        <Button Name="BtnDelete" Content="Delete" Background="Red" Margin="397,510,79,0" VerticalAlignment="Top" Height="55" Width="124" Visibility="Hidden" Click="BtnDelete_OnClick" Cursor="Hand"/>
+        <Button Name="BtnAdd" Content="Add" Background="Lime" VerticalAlignment="Top" Height="55" Margin="238,510,222,0" Visibility="Hidden" Click="BtnAdd_OnClick" Cursor="Hand"/>
         <Label Foreground="GhostWhite" FontWeight="Bold" Content="Player Id" HorizontalAlignment="Left" Margin="60,115,0,0" VerticalAlignment="Top"/>
         <Label Foreground="GhostWhite" FontWeight="Bold" Content="Player Name" HorizontalAlignment="Left" Margin="363,115,0,0" VerticalAlignment="Top"/>
         <Label Foreground="GhostWhite" FontWeight="Bold" Content="Achievements" HorizontalAlignment="Left" Margin="60,199,0,0" VerticalAlignment="Top"/>

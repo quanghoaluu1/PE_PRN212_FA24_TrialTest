@@ -15,10 +15,10 @@
                 <DataGridTextColumn Header="Football Team Name" Binding="{Binding TeamTitle}" Width="2*" />
                 <DataGridTextColumn Header="Country" Binding="{Binding Country}" Width="2*" />
                 <DataGridTextColumn Header="Manager" Binding="{Binding ManagerName}" Width="2*"/>
-                <DataGridTemplateColumn Header="Detail" Width="1*">
+                <DataGridTemplateColumn Header="Players Detail" Width="1*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Image Source="/Resource/Images/detail.png" Width="30" Height="30" Margin="5" Tag="{Binding FootballTeamId}" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown"/>
+                            <Image Source="/Resource/Images/detail.png" Width="30" Height="30" Margin="5" Tag="{Binding FootballTeamId}" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown" Cursor="Hand"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

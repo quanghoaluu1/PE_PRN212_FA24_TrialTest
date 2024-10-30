@@ -32,6 +32,8 @@
     </Resource>
     <None Remove="Resource\Images\add.png" />
     <Resource Include="Resource\Images\add.png" />
+    <None Remove="Resource\Images\logout.png" />
+    <Resource Include="Resource\Images\logout.png" />
   </ItemGroup>
 
   <ItemGroup>

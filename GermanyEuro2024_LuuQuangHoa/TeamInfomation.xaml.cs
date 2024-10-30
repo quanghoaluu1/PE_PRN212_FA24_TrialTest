@@ -23,10 +23,12 @@ namespace GermanyEuro2024_LuuQuangHoa
     public partial class TeamInfomation : Page
     {
         private FootballTeamRepository _footballTeamRepository;
-        public TeamInfomation()
+        private int? _role = 0;
+        public TeamInfomation(int? role)
         {
             InitializeComponent();
             _footballTeamRepository = new FootballTeamRepository();
+            _role = role;
         }
 
         public void Page_Loaded(object sender, RoutedEventArgs e)
@@ -46,7 +48,7 @@ namespace GermanyEuro2024_LuuQuangHoa
             if (image != null)
             {
                 string teamId = image.Tag as string;
-                NavigationService.Navigate(new PlayerInformation(teamId));
+                NavigationService.Navigate(new PlayerInformation(teamId, _role));
 
             }
         }
